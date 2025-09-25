@@ -1,97 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RC Oficina</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-900 antialiased">
-
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-      <h1 class="text-2xl font-extrabold text-gray-800">RC Oficina</h1>
-      <nav class="flex gap-6 text-sm font-medium text-gray-600">
-        <a href="#servicos" class="hover:text-indigo-600">Serviços</a>
-        <a href="#galeria" class="hover:text-indigo-600">Galeria</a>
-        <a href="#agendar" class="hover:text-indigo-600">Agendar</a>
-        <a href="#contato" class="hover:text-indigo-600">Contato</a>
+      <div class="relative flex flex-col items-start justify-center h-40 mb-2 bg-center bg-no-repeat bg-contain" style="background-image: url('assets/logo-kzk-rc-oficina.png');">
+        <h1 class="text-2xl font-extrabold text-white drop-shadow-lg z-10">RC Oficina</h1>
+        <p class="text-sm text-white drop-shadow z-10">Ajuste. Reparo. Adrenalina.</p>
+        <div class="absolute inset-0 bg-black opacity-10 rounded-lg pointer-events-none"></div>
+      </div>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="/rc-oficina/#servicos" class="hover:underline">Serviços</a>
+        <a href="/rc-oficina/#galeria" class="hover:underline">Galeria</a>
+        <a href="/rc-oficina/#agendar" class="hover:underline">Agendar</a>
+        <a href="/rc-oficina/#contato" class="hover:underline">Contato</a>
       </nav>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 py-10">
-
     <!-- Hero -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg p-6 shadow-inner">
       <div>
         <h2 class="text-4xl font-extrabold leading-tight text-white">Oficina especializada</h2>
-        <p class="mt-4 text-gray-100">
-          Deixe seu carrinho RC nas mãos de quem entende. Diagnóstico rápido, manutenção especializada e preparação para pista. 
-          Peças originais e upgrades sob medida.
-        </p>
+        <p class="mt-4 text-gray-100">Deixe seu carrinho RC nas mãos de quem entende. Diagnóstico rápido, manutenção especializada e preparação para pista. Peças originais e upgrades sob medida.</p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#agendar" class="inline-block px-5 py-3 bg-indigo-600 text-white rounded-lg font-medium">Agendar diagnóstico</a>
-          <a href="#servicos" class="inline-block px-5 py-3 border border-gray-300 rounded-lg text-white">Ver serviços →</a>
+          <a href="/rc-oficina/#agendar" class="inline-block px-5 py-3 bg-indigo-600 text-white rounded-lg font-medium">Agendar diagnóstico</a>
+          <a href="/rc-oficina/#servicos" class="inline-block px-5 py-3 border border-gray-300 rounded-lg text-white">Ver serviços →</a>
+        </div>
+
+        <div class="mt-8 bg-white p-4 rounded-lg shadow-sm">
+          <h3 class="font-semibold">Atendimento rápido</h3>
+          <p class="text-sm text-gray-600">Receba um diagnóstico em até 48 horas. Trocas, solda e upgrades.</p>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <div>
+              <div class="text-xs text-gray-500">Diagnóstico</div>
+              <div class="font-medium">R$ 30</div>
+            </div>
+            <div>
+              <div class="text-xs text-gray-500">Reparo eletrônico</div>
+              <div class="font-medium">a partir de R$ 80</div>
+            </div>
+          </div>
+          <div class="mt-3 text-xs text-gray-500">Upgrade motor brushless — sob orçamento</div>
         </div>
       </div>
 
       <div class="rounded-lg shadow-inner flex items-center justify-center bg-white p-4">
-        <img src="assets/IMG_RCOFICINA 001.png" alt="Carrinho RC" class="h-56 object-contain rounded-md" />
+        <img src="assets/carrinho.png" alt="Carrinho RC" class="h-56 object-contain rounded-md" />
         <ul class="mt-4 space-y-2 text-sm text-gray-700">
-          <li>✅ Diagnóstico completo com relatório fotográfico</li>
-          <li>✅ Reparo eletrônico e soldas de precisão</li>
-          <li>✅ Instalação e calibração de motores brushless</li>
-          <li>✅ Ajuste de suspensão, troca de pneus e balanceamento</li>
+          <li>Diagnóstico completo com relatório fotográfico</li>
+          <li>Reparo eletrônico e soldas de precisão</li>
+          <li>Instalação e calibração de motores brushless</li>
+          <li>Ajuste de suspensão, troca de pneus e balanceamento</li>
         </ul>
       </div>
     </section>
 
     <!-- Serviços -->
     <section id="servicos" class="mt-16">
-      <h3 class="text-2xl font-bold mb-6">Serviços</h3>
-      <p class="text-gray-700 mb-4">Confira nossos principais serviços para seu carrinho RC:</p>
-      <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Diagnóstico eletrônico completo</li>
-        <li>Reparo e manutenção de motores</li>
-        <li>Troca e balanceamento de pneus</li>
-        <li>Upgrades e preparação para competições</li>
-      </ul>
+      <h3 class="text-2xl font-bold">Nossos serviços</h3>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+        <article class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">Diagnóstico completo</h4>
+          <p class="text-sm text-gray-600 mt-2">Análise eletrônica e mecânica; relatório com fotos e orçamento.</p>
+        </article>
+        <article class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">Reparo eletrônico</h4>
+          <p class="text-sm text-gray-600 mt-2">Troca/recuperação de ESC, receptores, servos, soldas de precisão.</p>
+        </article>
+        <article class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">Motor & Performance</h4>
+          <p class="text-sm text-gray-600 mt-2">Instalação de motores brushless, programação de ESC e calibração.</p>
+        </article>
+        <article class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">Suspensão & pneus</h4>
+          <p class="text-sm text-gray-600 mt-2">Ajuste de amortecedores, troca de pneus e balanceamento.</p>
+        </article>
+      </div>
     </section>
 
     <!-- Galeria -->
     <section id="galeria" class="mt-16">
-      <h3 class="text-2xl font-bold mb-6">Galeria</h3>
-      <p class="text-gray-700">Em breve: fotos dos carrinhos atendidos e projetos especiais.</p>
+      <h3 class="text-2xl font-bold">Galeria</h3>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC antes</div>
+        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC após</div>
+        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC em pista</div>
+        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Bancada com ferramentas</div>
+      </div>
     </section>
 
-    <!-- Agendar -->
-    <section id="agendar" class="mt-16">
-      <h3 class="text-2xl font-bold mb-6">Agendar diagnóstico</h3>
-      <form class="space-y-4 max-w-md">
-        <input type="text" placeholder="Seu nome" class="w-full border rounded-lg p-2" required>
-        <input type="email" placeholder="Seu e-mail" class="w-full border rounded-lg p-2" required>
-        <textarea placeholder="Descreva o problema" class="w-full border rounded-lg p-2" rows="4"></textarea>
-        <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded-lg">Enviar</button>
-      </form>
-    </section>
+    <!-- Agendamento -->
+    <section id="agendar" class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-2xl font-bold">Agende seu serviço</h3>
+        <p class="mt-2 text-sm text-gray-600">Resposta em até 24h úteis. Após o envio você receberá instruções para entrega/recebimento do equipamento.</p>
+        <form class="mt-6 space-y-4 bg-white p-6 rounded-lg shadow-sm">
+          <div>
+            <label class="block text-sm font-medium">Nome completo</label>
+            <input class="mt-1 w-full border rounded-md p-2" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Telefone (WhatsApp)</label>
+            <input class="mt-1 w-full border rounded-md p-2" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">E-mail</label>
+            <input type="email" class="mt-1 w-full border rounded-md p-2" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Selecione o serviço</label>
+            <select class="mt-1 w-full border rounded-md p-2">
+              <option>Diagnóstico completo</option>
+              <option>Reparo eletrônico</option>
+              <option>Motor & Performance</option>
+              <option>Suspensão & pneus</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Descreva o problema / modelo do carrinho</label>
+            <textarea class="mt-1 w-full border rounded-md p-2" rows="3"></textarea>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-sm font-medium">Data (dd/mm/aaaa)</label>
+              <input placeholder="dd/mm/aaaa" class="mt-1 w-full border rounded-md p-2" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Hora</label>
+              <input placeholder="--:--" class="mt-1 w-full border rounded-md p-2" />
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Enviar agendamento</button>
+            <div class="text-sm text-gray-500">Resposta em até 24h úteis</div>
+          </div>
+        </form>
+      </div>
 
-    <!-- Contato -->
-    <section id="contato" class="mt-16">
-      <h3 class="text-2xl font-bold mb-6">Contato</h3>
-      <p class="text-gray-700">Entre em contato pelo e-mail <a href="mailto:contato@rcoficina.com" class="text-indigo-600">contato@rcoficina.com</a></p>
+      <aside class="space-y-4" id="contato">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">Contato</h4>
+          <p class="text-sm text-gray-600 mt-2">Rua Saldanha da Gama, 76, São Vicente - SP - Brasil CEP: 11320-180</p>
+          <p class="text-sm text-gray-600">Horário: Seg–Sex 9h–18h</p>
+          <p class="text-sm mt-2">WhatsApp: <a href="tel:+5511996233933" class="underline">(11) 996233933</a></p>
+          <p class="text-sm">E-mail: <a href="mailto:mpspraia@gmail.com" class="underline">mpspraia@gmail.com</a></p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold">FAQ rápido</h4>
+          <dl class="mt-2 text-sm text-gray-600">
+            <dt class="font-medium">Quanto tempo dura o diagnóstico?</dt>
+            <dd class="mt-1">24–48h.</dd>
+            <dt class="mt-2 font-medium">Vocês vendem peças?</dt>
+            <dd class="mt-1">Sim, peças e acessórios na loja.</dd>
+          </dl>
+        </div>
+        <div class="text-xs text-gray-500">Obs: Após o envio você receberá instruções para entrega/recebimento do equipamento.</div>
+      </aside>
     </section>
 
     <!-- Footer -->
     <footer class="mt-16 border-t pt-6 pb-12">
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="text-sm">© RC Oficina — Todos os direitos reservados</div>
-        <div class="text-sm">Feito com paixão por carros radiocontrolados</div>
+        <div class="text-sm">Feito com paixão por carros RC</div>
       </div>
     </footer>
-
   </main>
 </body>
 </html>
+
