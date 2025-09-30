@@ -3,62 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upgrade: Motor Brushless e Relação de Engrenagens</title>
+  <title>Motor KV ou Engrenagem? Guia RC</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
-  <!-- Cabeçalho -->
-  <header class="bg-gray-800 text-white p-6 shadow-md">
-    <h1 class="text-2xl md:text-3xl font-bold text-center">Upgrade: Motor Brushless e Relação de Engrenagens</h1>
-    <p class="text-center mt-2 text-gray-300">Guia para otimizar desempenho, autonomia e durabilidade em carros RC</p>
-  </header>
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      Motor com KV maior ou mudar engrenagem? Saiba quando vale a pena em carros RC
+    </h1>
 
-  <!-- Conteúdo Principal -->
-  <main class="flex-grow container mx-auto px-4 py-8 space-y-10">
+    <p class="mb-6">
+      Quer aumentar a velocidade do seu carro RC? Antes de trocar o motor por um KV mais alto, é importante entender se alterar apenas a relação de engrenagens já resolve. Este guia explica de forma prática quando cada opção faz sentido, evitando gastos desnecessários e risco de queima de componentes.
+    </p>
 
-    <section class="prose prose-lg max-w-none">
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">1. O que é o KV do motor</h2>
+    <p>KV significa “RPM por volt”.</p>
+    <ul class="list-disc list-inside mb-6">
+      <li>Um motor de 3200 KV em bateria 3S (11,1 V) gira a aproximadamente 35.500 RPM sem carga.</li>
+      <li>Quanto maior o KV, mais RPM por volt → mais velocidade final, porém menos torque (força) e mais aquecimento.</li>
+    </ul>
 
-      <p>Este guia aborda quando vale a pena trocar o motor brushless por um de KV maior e/ou alterar a relação das engrenagens em carros RC, explicando os impactos no desempenho, autonomia e durabilidade.</p>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">2. Relação de engrenagens: o câmbio do seu RC</h2>
+    <p>
+      A relação de engrenagens em carros RC envolve tanto o pinhão quanto a coroa, e o número de dentes de cada peça influencia diretamente a velocidade, torque e temperatura do motor.
+    </p>
+    <p class="mb-4">
+      Aumentar o número de dentes da coroa ou do pinhão altera a razão de transmissão: se aumentarmos ambos ao mesmo tempo mantendo a proporção, o comportamento do carro se mantém similar, mas o motor pode trabalhar com menor esforço relativo, resultando em menor aquecimento. Já reduzir simultaneamente os dentes de coroa e pinhão mantém a relação, mas o motor precisa girar mais rapidamente para a mesma velocidade, aumentando o consumo de bateria e a temperatura.
+    </p>
+    <p class="mb-4">Quando variamos o tamanho da coroa em relação ao pinhão, surgem efeitos perceptíveis:</p>
 
-      <h2 class="font-bold mt-6 mb-2">1. Motor KV</h2>
-      <p>O valor KV de um motor indica quantas rotações por minuto ele dará por cada volt aplicado. Um KV maior significa mais velocidade, mas menos torque (força). A escolha depende do tipo de pista e objetivo do carro.</p>
+    <ul class="list-disc list-inside mb-6">
+      <li><strong>Coroa maior que o pinhão (relação mais alta)</strong>: aumenta torque e aceleração, facilitando arrancadas e subidas, mas reduz a velocidade máxima. O motor trabalha mais lentamente, gerando menos calor.</li>
+      <li><strong>Pinhão maior que a coroa (relação mais baixa)</strong>: aumenta a velocidade máxima, porém reduz o torque, tornando o carro mais sensível a perda de tração em saídas ou subidas e aumentando o esforço do motor, elevando a temperatura.</li>
+    </ul>
 
-      <p><strong>Vantagens de aumentar o KV:</strong></p>
-      <ul class="ml-6 space-y-1">
-        <li>Maior velocidade máxima</li>
-        <li>Melhor desempenho em pistas retas</li>
-      </ul>
+    <p class="mb-4">
+      Por exemplo, se temos uma coroa de 60 dentes e um pinhão de 20 dentes, a relação é 3:1, oferecendo equilíbrio entre torque e velocidade. Aumentando ambos para 80 dentes na coroa e 27 dentes no pinhão, a relação se mantém próxima de 3:1, mas o motor trabalha de forma mais leve, com menor temperatura e maior durabilidade. Reduzindo o pinhão para 18 dentes e a coroa para 54 dentes, a relação continua 3:1, mas o motor gira mais rápido para atingir a mesma velocidade, exigindo mais da bateria e gerando mais calor.
+    </p>
 
-      <p><strong>Desvantagens de aumentar o KV:</strong></p>
-      <ul class="ml-6 space-y-1">
-        <li>Maior consumo de bateria</li>
-        <li>Menor torque para arrancadas e subidas</li>
-        <li>Risco de aquecimento excessivo do motor</li>
-      </ul>
+    <p class="mb-4">
+      Alterações não proporcionais, como coroa de 70 dentes e pinhão de 20 dentes (3,5:1), aumentam torque, reduzem velocidade máxima e tornam o motor menos exigido, enquanto o inverso (coroa de 50 dentes e pinhão de 20 dentes, 2,5:1) prioriza velocidade máxima, mas exige mais força do motor e aumenta a temperatura.
+    </p>
 
-      <h2 class="font-bold mt-6 mb-2">2. Relação de Engrenagens</h2>
-      <p>A relação de engrenagens (pinhão/coroa) afeta diretamente velocidade e torque. Diminuir o pinhão ou aumentar a coroa aumenta torque e aceleração, mas reduz a velocidade máxima.</p>
+    <p class="mb-6">
+      Em resumo, a escolha da relação entre pinhão e coroa não depende apenas do tamanho absoluto, mas da proporção entre os dentes. Relações maiores (coroa muito maior que o pinhão) tornam o carro mais forte e estável em arrancadas, enquanto relações menores (pinhão grande em relação à coroa) aumentam a velocidade máxima, mas exigem mais torque do motor, elevando o aquecimento. Ajustes finos permitem equilibrar velocidade, força e durabilidade, adequando o carro ao tipo de pista e estilo de pilotagem.
+    </p>
 
-      <h2 class="font-bold mt-6 mb-2">3. Quando trocar o KV do motor ou engrenagem</h2>
-      <p>Se o objetivo é aumentar a velocidade máxima sem mudar muito torque, aumentar o KV pode ser suficiente. Se o carro perde desempenho em arrancadas e subidas, ajustar a relação de engrenagens é mais eficiente e menos arriscado para o motor.</p>
-
-    </section>
-
-    <!-- Botão Voltar -->
-    <div class="text-center mt-8">
-      <a href="https://mpspraia-lab.github.io/rc-oficina/index.html" 
-         class="inline-block bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition">
-        Voltar
-      </a>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">3. Quando trocar o motor por KV maior</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Você já atingiu o limite das engrenagens e ainda quer mais velocidade.</li>
+      <li>O motor atual trabalha frio e o ESC aguenta mais corrente.</li>
+      <li>Você busca aceleração mais agressiva e não se importa em perder torque.</li>
+    </ul>
+    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6">
+      ⚠️ Atenção: KV muito alto pode provocar superaquecimento, consumo excessivo de bateria e desgaste acelerado da transmissão.
     </div>
 
-  </main>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">4. Quando mudar apenas as engrenagens</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Você quer um ajuste rápido e barato sem trocar motor ou ESC.</li>
+      <li>O motor tem torque suficiente, mas falta velocidade final.</li>
+      <li>Precisa adaptar o carro para um tipo de pista (reta longa x pista técnica).</li>
+    </ul>
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
+      💡 Dica: aumente o pinhão 1 dente por vez e monitore a temperatura. Isso evita surpresas.
+    </div>
 
-  <!-- Rodapé -->
-  <footer class="bg-gray-800 text-white text-center py-4 mt-12">
-    <p>© 2025 RC Oficina. Todos os direitos reservados.</p>
-  </footer>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">5. Checklist rápido para decidir</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Temperatura do motor: acima de 80–90 °C = risco de queima.</li>
+      <li>ESC suporta? Verifique amperagem e recomendação do fabricante.</li>
+      <li>Bateria adequada? C-rating suficiente para evitar quedas de tensão.</li>
+      <li>Tipo de pista: reta longa → relação longa; pista técnica → mais torque.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">6. Exemplo prático</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Motor atual: 3200 KV com pinhão 19T.</li>
+      <li>Opção 1: trocar para motor 4000 KV mantendo pinhão.</li>
+      <li>Opção 2: manter motor e subir pinhão para 22T.</li>
+    </ul>
+    <p class="mb-6">Teste temperatura após 5 minutos de uso intenso. Se tudo estiver frio, pode aumentar mais.</p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">7. Resumo para o entusiasta RC</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Comece alterando as engrenagens, é mais barato e reversível.</li>
+      <li>Se já está no limite e tudo está frio, aí sim invista em motor KV maior.</li>
+      <li>Sempre monitore temperatura e corrente para proteger ESC, motor e bateria.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">8. Ferramenta bônus para o seu site</h2>
+    <p class="mb-6">
+      Coloque no final do artigo uma calculadora simples de velocidade final. O leitor informa KV, célula da bateria, número de dentes do pinhão e do spur, e vê uma estimativa da velocidade máxima antes mesmo de mexer no carro.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Conclusão</h2>
+    <p class="mb-8">
+      Escolher entre motor KV maior ou alterar a relação das engrenagens depende do seu objetivo, do limite dos componentes atuais e do tipo de pista. Com esse guia, você evita gastar à toa e acerta o setup do seu carro RC de forma mais assertiva.
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
 
 </body>
 </html>
