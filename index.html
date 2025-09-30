@@ -1,191 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RC Oficina</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KZK RC-Oficina: Manutenção e Preparação para Velocidade Extrema</title>
+    <style>
+        :root {
+            --cor-principal: #FF4500; /* Laranja Vívido - High Performance */
+            --cor-secundaria: #333;
+            --cor-fundo: #f4f4f4;
+            --cor-texto: #1a1a1a;
+            --fonte-titulo: 'Arial Black', sans-serif;
+            --fonte-corpo: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--cor-secundaria);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--cor-principal);
+        }
+
+        header h1 {
+            font-family: var(--fonte-titulo);
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta {
+            background-color: var(--cor-principal);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .cta h2 {
+            margin-top: 0;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background-color: white;
+            color: var(--cor-principal);
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: var(--cor-secundaria);
+            color: white;
+        }
+
+        h2 {
+            color: var(--cor-principal);
+            border-bottom: 2px solid var(--cor-principal);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .article-list li {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-list a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .article-list a:hover {
+            color: var(--cor-principal);
+        }
+
+        /* Estilos para a seção de Projetos e Informações */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: #eee;
+            padding: 20px;
+            border-left: 5px solid var(--cor-principal);
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: var(--cor-principal);
+            margin-top: 0;
+        }
+
+        /* Estilos para a seção de Contato */
+        #contato {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #fff;
+            border: 1px dashed #ddd;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        #contato p {
+            font-size: 1.1em;
+        }
+
+        #contato a {
+            color: var(--cor-principal);
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: color 0.3s;
+        }
+
+        #contato a:hover {
+            color: var(--cor-secundaria);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--cor-secundaria);
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .article-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
-<body class="min-h-screen bg-gray-50 text-gray-900 antialiased">
+<body>
 
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <img src="./assets/logo.png" alt="RC Oficina Logo" class="h-14 w-auto" />
-        <div>
-          <h1 class="text-xl font-extrabold text-gray-900">RC Oficina</h1>
-          <p class="text-sm text-gray-600">Ajuste. Reparo. Adrenalina.</p>
+    <header>
+        <h1>KZK RC-OFICINA</h1>
+        <p>25 Anos de Pista: Sua Oficina de Manutenção e Preparação para Velocidade Extrema e Alto Desempenho.</p>
+    </header>
+
+    <div class="container">
+
+        <div class="cta">
+            <h2>Rápido é para Amadores. **NÓS CRIAMOS RECORDES**.</h2>
+            <p>Seu limite é a nossa pista de testes. A KZK RC-Oficina leva seu RC ao máximo do desempenho.</p>
+            <a href="#artigos">COMECE SEU UPGRADE AGORA!</a>
         </div>
-      </div>
 
-      <!-- Navegação -->
-      <nav class="space-x-4 hidden md:flex">
-        <a href="#servicos" class="hover:underline">Serviços</a>
-        <a href="#galeria" class="hover:underline">Galeria</a>
-        <a href="#agendar" class="hover:underline">Agendar</a>
-        <a href="#contato" class="hover:underline">Contato</a>
-      </nav>
+        <section id="artigos">
+            <h2>:: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS ::</h2>
+            <p>Acelere seu aprendizado com nossa biblioteca de conhecimento acumulado em mais de duas décadas de prática.</p>
+
+            <ul class="article-list">
+                <li><a href="./artigos/motor-engrenagem.html">⚙️ **Motor com KV maior ou mudar engrenagem?** Otimizando a Performance.</a></li>
+                <li><a href="./artigos/lipo.html">⚡ **Baterias LiPo:** A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
+                <li><a href="./artigos/lipo-inchadas.html">⚠️ **Baterias LiPo Inchadas:** Identificação, Causas e O que Fazer (Segurança em 1º).</a></li>
+                <li><a href="./artigos/pneus-altas-velocidades.html">💨 **Pneus para Altas Velocidades:** Como manter o carro no chão (e a 100km/h).</a></li>
+                <li><a href="./artigos/upgrade-fibra-carbono.html">💎 **Upgrade para Fibra de Carbono:** Leveza, Rigidez e Performance Incomparável.</a></li>
+                <li><a href="./artigos/escala-rc.html">📏 **1/14 ou 1/12:** Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
+                <li><a href="./artigos/144001-super-veloz.html">🚀 **Criando um 144001 Super Veloz:** Guia de Upgrades Extremos.</a></li>
+                <li><a href="./artigos/servo-bec.html">💡 **Servo Digital e BEC:** Precisão e Potência para o Controle Absoluto.</a></li>
+                <li><a href="./artigos/angulos-amortecedores.html">📐 **Ângulos dos Amortecedores:** O Setup Fino para Máxima Tração e Estabilidade.</a></li>
+                <li><a href="./artigos/partiu-competir.html">🏆 **Partiu Competir:** O Passo a Passo para Sua Primeira Corrida Oficial.</a></li>
+                <li><a href="./artigos/dia-antes-corrida.html">🔧 **Dia Antes da Corrida de Carros RC:** O Checklist Definitivo Pré-Pista.</a></li>
+                <li><a href="./artigos/dia-seguinte-competicao.html">🧼 **Dia Seguinte de uma Competição:** Manutenção Essencial para Longa Vida do RC.</a></li>
+                <li><a href="./artigos/arrma-felony-detalhada.html">💥 **Arrma Felony:** Descrição Detalhada – O Muscle Car da Pista.</a></li>
+                <li><a href="./artigos/arrma-limitless-detalhada.html">♾️ **Arrma Limitless:** Descrição Detalhada – O Caça-Recordes de Velocidade.</a></li>
+                <li style="background: #f0f0f0;"><a href="#">+ ADICIONE SEU PRÓXIMO ARTIGO AQUI</a></li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <div class="info-box">
+                <h3>Glossário RC</h3>
+                <p>Decifre a linguagem técnica da alta performance. **Essencial para novatos e veteranos!**</p>
+                <a href="./glossario.html">Ver Glossário Completo</a>
+            </div>
+            <div class="info-box">
+                <h3>Projetos RC</h3>
+                <p>Acompanhe a construção e os testes de nossos carros. **Inspire seu próximo build!**</p>
+                <a href="./projetos.html">Explorar Projetos</a>
+            </div>
+            <div class="info-box">
+                <h3>Links Úteis</h3>
+                <p>Nossos fornecedores, comunidades e ferramentas favoritas. Recursos que realmente fazem a diferença.</p>
+                <a href="./links.html">Acessar Links Selecionados</a>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>:: ENTRE EM CONTATO COM A OFICINA ::</h2>
+            <p>Precisa de manutenção, consultoria para upgrades ou preparação para alta velocidade? Fale conosco!</p>
+            <p>E-mail direto (clique para enviar):</p>
+            <a href="mailto:mpspraia@gmail.com">mpspraia@gmail.com</a>
+            <p style="margin-top: 15px; font-size: 0.9em;">*Seu projeto de alto desempenho começa aqui na KZK RC-Oficina.</p>
+        </section>
+
     </div>
-  </header>
 
-  <!-- Main -->
-  <main class="max-w-6xl mx-auto px-6 py-10">
-
-    <!-- Hero -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg p-6 shadow-inner">
-      <div>
-        <h2 class="text-4xl font-extrabold leading-tight text-white">Oficina especializada</h2>
-        <p class="mt-4 text-gray-100">Deixe seu carrinho RC nas mãos de quem entende. Diagnóstico rápido, manutenção especializada e preparação para pista. Peças originais e upgrades sob medida.</p>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#agendar" class="inline-block px-5 py-3 bg-indigo-600 text-white rounded-lg font-medium">Agendar diagnóstico</a>
-          <a href="#servicos" class="inline-block px-5 py-3 border border-gray-300 rounded-lg text-white">Ver serviços →</a>
-        </div>
-
-        <div class="mt-8 bg-white p-4 rounded-lg shadow-sm">
-          <h3 class="font-semibold">Atendimento rápido</h3>
-          <p class="text-sm text-gray-600">Receba um diagnóstico em até 48 horas. Trocas, solda e upgrades.</p>
-          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
-            <div>
-              <div class="text-xs text-gray-500">Diagnóstico</div>
-              <div class="font-medium">R$ 30</div>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500">Reparo eletrônico</div>
-              <div class="font-medium">a partir de R$ 80</div>
-            </div>
-          </div>
-          <div class="mt-3 text-xs text-gray-500">Upgrade motor brushless — sob orçamento</div>
-        </div>
-      </div>
-
-      <!-- Imagem do carrinho -->
-      <div class="rounded-lg shadow-inner flex flex-col items-center justify-center bg-white p-4">
-        <img src="./assets/carrinho.png" alt="Carrinho RC" class="h-56 object-contain rounded-md" />
-        <ul class="mt-4 space-y-2 text-sm text-gray-700">
-          <li>Diagnóstico completo com relatório fotográfico</li>
-          <li>Reparo eletrônico e soldas de precisão</li>
-          <li>Instalação e calibração de motores brushless</li>
-          <li>Ajuste de suspensão, troca de pneus e balanceamento</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" class="mt-16">
-      <h3 class="text-2xl font-bold">Nossos serviços</h3>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-        <article class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">Diagnóstico completo</h4>
-          <p class="text-sm text-gray-600 mt-2">Análise eletrônica e mecânica; relatório com fotos e orçamento.</p>
-        </article>
-        <article class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">Reparo eletrônico</h4>
-          <p class="text-sm text-gray-600 mt-2">Troca/recuperação de ESC, receptores, servos, soldas de precisão.</p>
-        </article>
-        <article class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">Motor & Performance</h4>
-          <p class="text-sm text-gray-600 mt-2">Instalação de motores brushless, programação de ESC e calibração.</p>
-        </article>
-        <article class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">Suspensão & pneus</h4>
-          <p class="text-sm text-gray-600 mt-2">Ajuste de amortecedores, troca de pneus e balanceamento.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="galeria" class="mt-16">
-      <h3 class="text-2xl font-bold">Galeria</h3>
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC Antes</div>
-        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC após</div>
-        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Carrinho RC em pista</div>
-        <div class="bg-gray-100 h-36 rounded-md flex items-center justify-center">Bancada com ferramentas</div>
-      </div>
-    </section>
-
-    <!-- Agendamento -->
-    <section id="agendar" class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-      <div>
-        <h3 class="text-2xl font-bold">Agende seu serviço</h3>
-        <p class="mt-2 text-sm text-gray-600">Resposta em até 24h úteis. Após o envio você receberá instruções para entrega/recebimento do equipamento.</p>
-        <form class="mt-6 space-y-4 bg-white p-6 rounded-lg shadow-sm">
-          <div>
-            <label class="block text-sm font-medium">Nome completo</label>
-            <input class="mt-1 w-full border rounded-md p-2" required />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Telefone (WhatsApp)</label>
-            <input class="mt-1 w-full border rounded-md p-2" required />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">E-mail</label>
-            <input type="email" class="mt-1 w-full border rounded-md p-2" required />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Selecione o serviço</label>
-            <select class="mt-1 w-full border rounded-md p-2">
-              <option>Diagnóstico completo</option>
-              <option>Reparo eletrônico</option>
-              <option>Motor & Performance</option>
-              <option>Suspensão & pneus</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Descreva o problema / modelo do carrinho</label>
-            <textarea class="mt-1 w-full border rounded-md p-2" rows="3"></textarea>
-          </div>
-          <div class="grid grid-cols-2 gap-2">
-            <div>
-              <label class="block text-sm font-medium">Data (dd/mm/aaaa)</label>
-              <input placeholder="dd/mm/aaaa" class="mt-1 w-full border rounded-md p-2" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium">Hora</label>
-              <input placeholder="--:--" class="mt-1 w-full border rounded-md p-2" />
-            </div>
-          </div>
-          <div class="flex items-center justify-between">
-            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Enviar agendamento</button>
-            <div class="text-sm text-gray-500">Resposta em até 24h úteis</div>
-          </div>
-        </form>
-      </div>
-
-      <!-- Contato -->
-      <aside class="space-y-4" id="contato">
-        <div class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">Contato</h4>
-          <p class="text-sm text-gray-600 mt-2">Rua Saldanha da Gama, 76, São Vicente - SP - Brasil CEP: 11320-180</p>
-          <p class="text-sm text-gray-600">Horário: Seg–Sex 9h–18h</p>
-          <p class="text-sm mt-2">WhatsApp: <a href="tel:+5511996233933" class="underline">(11) 9962-33933</a></p>
-          <p class="text-sm">E-mail: <a href="mailto:mpspraia@gmail.com" class="underline">mpspraia@gmail.com</a></p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-sm">
-          <h4 class="font-semibold">FAQ rápido</h4>
-          <dl class="mt-2 text-sm text-gray-600">
-            <dt class="font-medium">Quanto tempo dura o diagnóstico?</dt>
-            <dd class="mt-1">24–48h.</dd>
-            <dt class="mt-2 font-medium">Vocês vendem peças?</dt>
-            <dd class="mt-1">Sim, comercializamos peças e acessórios.</dd>
-          </dl>
-        </div>
-        <div class="text-xs text-gray-500">Obs: Após o envio você receberá instruções para entrega/recebimento do equipamento.</div>
-      </aside>
-    </section>
-
-    <!-- Footer -->
-    <footer class="mt-16 border-t pt-6 pb-12">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="text-sm">© RC Oficina — Todos os direitos reservados</div>
-        <div class="text-sm">Feito com paixão por carros radiocontrolados</div>
-      </div>
+    <footer>
+        <p>&copy; 2025 KZK RC-Oficina. Seu parceiro em alta performance. **A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.**</p>
     </footer>
-
-  </main>
 
 </body>
 </html>
+
+
+
