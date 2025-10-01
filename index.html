@@ -131,7 +131,6 @@
             color: var(--cor-principal);
         }
 
-        /* Estilos para a seção de Projetos e Informações */
         .info-section {
             display: flex;
             flex-wrap: wrap;
@@ -153,7 +152,6 @@
             margin-top: 0;
         }
 
-        /* Estilos para a seção de Contato */
         #contato {
             margin-top: 40px;
             padding: 25px;
@@ -189,7 +187,6 @@
             font-size: 0.9em;
         }
 
-        /* Responsividade Básica */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 1.8em;
@@ -199,9 +196,53 @@
             }
         }
 
+        /* ======== ABERTURA ANIMADA APRIMORADA ======== */
+        #splash {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        #splash-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #logo {
+            position: relative;
+            color: gold;
+            font-size: 3em;
+            font-weight: bold;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoom 3s forwards;
+            font-family: 'Arial', sans-serif;
+            z-index: 2;
+            text-align: center;
+        }
+
+        @keyframes fadeZoom {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0; transform: scale(1); }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Abertura animada -->
+    <div id="splash">
+        <canvas id="splash-canvas"></canvas>
+        <div id="logo">KZK RC-OFICINA</div>
+    </div>
 
     <header>
         <h1>KZK RC-OFICINA</h1>
@@ -227,7 +268,7 @@
                 <li><a href="./artigos/motor-engrenagem.html">⚙️ Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
                 <li><a href="./artigos/lipo.html">⚡Baterias LiPo: A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
                 <li><a href="./artigos/lipo-inchadas.html">⚠️ Baterias LiPo Inchadas: Identificação, Causas e O que Fazer (Segurança em 1º).</a></li>
-                <li><a href="./artigos/capacitores.html">💎 Vantagens e Desvantagens de Instalar Capacitores.</a></li>                
+                <li><a href="./artigos/capacitores.html">💎 Vantagens e Desvantagens de Instalar Capacitores.</a></li>               
                 <li><a href="./artigos/pneus-altas-velocidades.html">💨 Pneus para Altas Velocidades: Como manter o carro no chão a 100km/h.</a></li>
                 <li><a href="./artigos/upgrade-fibra-carbono.html">💎 Upgrade para Fibra de Carbono: Leveza, Rigidez e Performance Incomparável.</a></li>
                 <li><a href="./artigos/escala-rc.html">📏 1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
@@ -275,8 +316,63 @@
         <p>&copy; 2025 KZK RC-Oficina. Seu parceiro na alta performance de RCs. **A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.**</p>
     </footer>
 
+    <!-- Script da abertura animada com partículas -->
+    <script>
+        // Remover a tela de abertura após 3 segundos
+        setTimeout(() => {
+            const splash = document.getElementById('splash');
+            splash.style.transition = 'opacity 0.5s';
+            splash.style.opacity = 0;
+            setTimeout(() => splash.remove(), 500);
+        }, 3000);
+
+        // Partículas leves
+        const canvas = document.getElementById('splash-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createParticles() {
+            particles = [];
+            for (let i = 0; i < 80; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 1,
+                    speedX: (Math.random() - 0.5) * 0.5,
+                    speedY: (Math.random() - 0.5) * 0.5
+                });
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255,215,0,0.7)'; // dourado leve
+                ctx.fill();
+                p.x += p.speedX;
+                p.y += p.speedY;
+
+                // Reaparecer do outro lado
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        createParticles();
+        animateParticles();
+    </script>
+
 </body>
 </html>
-
-
-
