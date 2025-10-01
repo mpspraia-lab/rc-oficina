@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motores Sensored vs Sensorless | RC Oficina</title>
+  <meta name="description" content="Entenda a diferença entre motores Sensored e Sensorless, 2-Poles e 4-Poles, e saiba qual é a melhor escolha para arrancadas RC de alta performance.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-gray-900 text-white p-6">
+    <h1 class="text-4xl font-bold text-center">
+      Motores <span class="text-yellow-400">Sensored</span> vs <span class="text-blue-400">Sensorless</span>
+    </h1>
+    <p class="text-center mt-2 text-gray-300">Escolha certa para máxima performance na arrancada RC</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-8">
+
+    <section class="bg-white p-6 rounded shadow-md">
+      <p class="text-lg leading-relaxed">
+        A escolha entre motores <span class="text-yellow-400 font-semibold">Sensored (com sensor)</span> e 
+        <span class="text-blue-400 font-semibold">Sensorless (sem sensor)</span>, e a variação entre 
+        <span class="text-green-500 font-semibold">2-Poles (2 Polos)</span> e 
+        <span class="text-red-500 font-semibold">4-Poles (4 Polos)</span>, é o coração do debate sobre potência e controle no RC de alta performance, especialmente nas arrancadas. 
+        Esta decisão afeta diretamente a largada (tração) e a velocidade final.
+      </p>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-3xl font-semibold mb-3">O Coração da Arrancada RC</h2>
+      <p class="leading-relaxed">
+        Em motores brushless, os "Polos" são ímãs no rotor que giram dentro do estator. 
+        O número de polos e sensores define o comportamento e desempenho do carro.
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6">
+
+      <!-- Sensorless -->
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M3 6h18M3 14h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="text-2xl font-semibold text-blue-700">Sensorless</h3>
+        </div>
+        <p class="mb-2 font-medium">Comum em modelos RTR e focado em top speed.</p>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li><strong>Funcionamento:</strong> ESC estima posição do rotor; bom em médias e altas velocidades.</li>
+          <li><strong>Custo:</strong> Mais barato; popular para bashers e top speed.</li>
+          <li><strong>Desvantagem:</strong> Cogging em baixas RPM, pode perder tração.</li>
+          <li><strong>ESC Requerido:</strong> Sensorless simples.</li>
+        </ul>
+      </div>
+
+      <!-- Sensored -->
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="text-2xl font-semibold text-yellow-700">Sensored</h3>
+        </div>
+        <p class="mb-2 font-medium">Preferido em competições com largada precisa.</p>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li><strong>Funcionamento:</strong> Sensor Hall envia posição real ao ESC; aceleração suave desde zero.</li>
+          <li><strong>Custo:</strong> Mais caro; fiação e motor mais complexos.</li>
+          <li><strong>Vantagem:</strong> Permite modular potência e maximizar tração.</li>
+          <li><strong>ESC Requerido:</strong> Sensored com porta de sensor dedicada.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-3xl font-semibold mb-3">O Papel dos Polos</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- 2-Poles -->
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+          <div class="flex items-center mb-3">
+            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3 class="text-2xl font-semibold text-green-700">2-Poles</h3>
+          </div>
+          <ul class="list-disc ml-6 space-y-1 text-gray-700">
+            <li>RPM mais altas para o mesmo kV.</li>
+            <li>Menos torque que 4-Poles equivalentes.</li>
+            <li>Uso: Top Speed e classes Stock antigas.</li>
+          </ul>
+        </div>
+
+        <!-- 4-Poles -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+          <div class="flex items-center mb-3">
+            <svg class="w-6 h-6 text-red-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3 class="text-2xl font-semibold text-red-700">4-Poles</h3>
+          </div>
+          <ul class="list-disc ml-6 space-y-1 text-gray-700">
+            <li>RPM menores, mas muito mais torque.</li>
+            <li>Aceleração rápida e melhor resposta em transmissões altas.</li>
+            <li>Uso: Drag Racing e Short Course Trucks.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-3xl font-semibold mb-3">Conclusão: A Escolha Outlaw</h2>
+      <p class="leading-relaxed">
+        Para carros Outlaw ou Prepared, a combinação ideal para máxima aceleração em 132 pés é:
+      </p>
+      <p class="leading-relaxed font-semibold text-lg mt-2">
+        Motor <span class="text-red-500">4-Poles</span> para torque explosivo e <span class="text-yellow-400">Sensored</span> para controlar o torque com precisão, evitando deslizamento das rodas e garantindo o tempo de reação perfeito.
+      </p>
+    </section>
+
+    <section class="mt-6 text-center">
+      <a href="../index.html" class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700 transition">⬅ Voltar ao Site</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
 
