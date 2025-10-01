@@ -6,10 +6,34 @@
   <title>Motores Sensored vs Sensorless | RC Oficina</title>
   <meta name="description" content="Entenda a diferença entre motores Sensored e Sensorless, 2-Poles e 4-Poles, e saiba qual é a melhor escolha para arrancadas RC de alta performance.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animação fade-in suave sequencial */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Atrasos sequenciais para cada box */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1s; }
+    .delay-6 { animation-delay: 1.2s; }
+    .delay-7 { animation-delay: 1.4s; }
+  </style>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-900 font-sans">
 
-  <header class="bg-gray-900 text-white p-6">
+  <header class="bg-gray-900 text-white p-6 fade-in delay-1">
     <h1 class="text-4xl font-bold text-center">
       Motores <span class="text-yellow-400">Sensored</span> vs <span class="text-blue-400">Sensorless</span>
     </h1>
@@ -18,7 +42,7 @@
 
   <main class="max-w-5xl mx-auto p-6 space-y-8">
 
-    <section class="bg-white p-6 rounded shadow-md">
+    <section class="bg-white p-6 rounded shadow-md fade-in delay-2">
       <p class="text-lg leading-relaxed">
         A escolha entre motores <span class="text-yellow-400 font-semibold">Sensored (com sensor)</span> e 
         <span class="text-blue-400 font-semibold">Sensorless (sem sensor)</span>, e a variação entre 
@@ -28,7 +52,7 @@
       </p>
     </section>
 
-    <section class="bg-white p-6 rounded shadow-md">
+    <section class="bg-white p-6 rounded shadow-md fade-in delay-3">
       <h2 class="text-3xl font-semibold mb-3">O Coração da Arrancada RC</h2>
       <p class="leading-relaxed">
         Em motores brushless, os "Polos" são ímãs no rotor que giram dentro do estator. 
@@ -37,9 +61,8 @@
     </section>
 
     <section class="grid md:grid-cols-2 gap-6">
-
       <!-- Sensorless -->
-      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200 fade-in delay-4">
         <div class="flex items-center mb-3">
           <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M3 6h18M3 14h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <h3 class="text-2xl font-semibold text-blue-700">Sensorless</h3>
@@ -54,7 +77,7 @@
       </div>
 
       <!-- Sensored -->
-      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm hover:shadow-lg transition duration-200 fade-in delay-5">
         <div class="flex items-center mb-3">
           <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <h3 class="text-2xl font-semibold text-yellow-700">Sensored</h3>
@@ -67,15 +90,13 @@
           <li><strong>ESC Requerido:</strong> Sensored com porta de sensor dedicada.</li>
         </ul>
       </div>
-
     </section>
 
-    <section class="bg-white p-6 rounded shadow-md">
+    <section class="bg-white p-6 rounded shadow-md fade-in delay-6">
       <h2 class="text-3xl font-semibold mb-3">O Papel dos Polos</h2>
       <div class="grid md:grid-cols-2 gap-6">
-
         <!-- 2-Poles -->
-        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200 fade-in delay-7">
           <div class="flex items-center mb-3">
             <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3 class="text-2xl font-semibold text-green-700">2-Poles</h3>
@@ -88,7 +109,7 @@
         </div>
 
         <!-- 4-Poles -->
-        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200">
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded shadow-sm hover:shadow-lg transition duration-200 fade-in delay-7">
           <div class="flex items-center mb-3">
             <svg class="w-6 h-6 text-red-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3 class="text-2xl font-semibold text-red-700">4-Poles</h3>
@@ -99,11 +120,10 @@
             <li>Uso: Drag Racing e Short Course Trucks.</li>
           </ul>
         </div>
-
       </div>
     </section>
 
-    <section class="bg-white p-6 rounded shadow-md">
+    <section class="bg-white p-6 rounded shadow-md fade-in delay-6">
       <h2 class="text-3xl font-semibold mb-3">Conclusão: A Escolha Outlaw</h2>
       <p class="leading-relaxed">
         Para carros Outlaw ou Prepared, a combinação ideal para máxima aceleração em 132 pés é:
@@ -113,7 +133,7 @@
       </p>
     </section>
 
-    <section class="mt-6 text-center">
+    <section class="mt-6 text-center fade-in delay-6">
       <a href="../index.html" class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700 transition">⬅ Voltar ao Site</a>
     </section>
 
@@ -121,4 +141,3 @@
 
 </body>
 </html>
-
