@@ -6,7 +6,7 @@
     <title>KZK RC-Oficina: Manutenção e Preparação para Velocidade Extrema</title>
     <style>
         :root {
-            --cor-principal: #FF4500; /* Laranja Vívido - High Performance */
+            --cor-principal: #FF4500;
             --cor-secundaria: #333;
             --cor-fundo: #f4f4f4;
             --cor-texto: #1a1a1a;
@@ -67,7 +67,7 @@
             margin-top: 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             word-wrap: break-word;
-            color: #FFD700; /* COR AJUSTADA PARA LEGIBILIDADE */
+            color: #FFD700;
         }
 
         .cta p {
@@ -211,7 +211,7 @@
             }
         }
 
-        /* ======== ABERTURA ANIMADA APRIMORADA ======== */
+        /* ====== SPLASH ESTILO ESTRADA 3D ====== */
         #splash {
             position: fixed;
             top: 0; left: 0;
@@ -227,8 +227,7 @@
         #splash-canvas {
             position: absolute;
             top: 0; left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
         }
 
         #logo {
@@ -236,18 +235,16 @@
             color: gold;
             font-size: 3em;
             font-weight: bold;
-            opacity: 0;
-            transform: scale(0.8);
-            animation: fadeZoom 3s forwards;
             font-family: 'Arial', sans-serif;
             z-index: 2;
             text-align: center;
+            animation: logoFly 3s forwards;
         }
 
-        @keyframes fadeZoom {
-            0% { opacity: 0; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.1); }
-            100% { opacity: 0; transform: scale(1); }
+        @keyframes logoFly {
+            0% { opacity: 0; transform: translateY(20px) scale(0.8);}
+            50% { opacity: 1; transform: translateY(0) scale(1.1);}
+            100% { opacity: 0; transform: translateY(-20px) scale(1);}
         }
     </style>
 </head>
@@ -267,9 +264,7 @@
     <div class="container">
 
         <div class="cta">
-            <!-- FRASE RESPONSIVA COM COR AJUSTADA PARA GOLD -->
-            <h2 class="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                       tracking-wide leading-tight" style="color: #FFD700;">
+            <h2 class="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide leading-tight" style="color: #FFD700;">
                 >> AQUI CRIAMOS RECORDES <<
             </h2>
             <p>Na KZK RC-Oficina Seu limite é a Nossa Pista de Testes.</p>
@@ -340,18 +335,12 @@
         <p>&copy; 2025 KZK RC-Oficina. Seu parceiro na alta performance de RCs. **A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.**</p>
     </footer>
 
-    <!-- Script da abertura animada com partículas -->
+    <!-- Script splash estrada 3D -->
     <script>
-        setTimeout(() => {
-            const splash = document.getElementById('splash');
-            splash.style.transition = 'opacity 0.5s';
-            splash.style.opacity = 0;
-            setTimeout(() => splash.remove(), 500);
-        }, 3000);
-
+        const splash = document.getElementById('splash');
         const canvas = document.getElementById('splash-canvas');
         const ctx = canvas.getContext('2d');
-        let particles = [];
+        let stripes = [];
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -360,38 +349,52 @@
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        function createParticles() {
-            particles = [];
-            for (let i = 0; i < 80; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 2 + 1,
-                    speedX: (Math.random() - 0.5) * 0.5,
-                    speedY: (Math.random() - 0.5) * 0.5
+        function createStripes() {
+            stripes = [];
+            const count = 50;
+            for (let i = 0; i < count; i++) {
+                stripes.push({
+                    x: canvas.width/2,
+                    y: Math.random()*canvas.height,
+                    w: 10 + Math.random()*15,
+                    h: 40 + Math.random()*20,
+                    speed: 5 + Math.random()*5,
+                    scale: 0.2 + Math.random()*0.8
                 });
             }
         }
 
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255,215,0,0.7)';
-                ctx.fill();
-                p.x += p.speedX;
-                p.y += p.speedY;
-                if (p.x < 0) p.x = canvas.width;
-                if (p.x > canvas.width) p.x = 0;
-                if (p.y < 0) p.y = canvas.height;
-                if (p.y > canvas.height) p.y = 0;
+        function animateStripes() {
+            ctx.fillStyle = '#111';
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            stripes.forEach(s => {
+                // perspectiva: quanto mais próximo, maior
+                const perspective = s.scale + s.y / canvas.height;
+                const width = s.w * perspective * 2;
+                const height = s.h * perspective;
+                ctx.fillStyle = 'white';
+                ctx.fillRect(s.x - width/2, s.y, width, height);
+                s.y += s.speed;
+                if (s.y > canvas.height) {
+                    s.y = -s.h;
+                    s.scale = 0.2 + Math.random()*0.8;
+                    s.w = 10 + Math.random()*15;
+                    s.h = 40 + Math.random()*20;
+                    s.speed = 5 + Math.random()*5;
+                }
             });
-            requestAnimationFrame(animateParticles);
+            requestAnimationFrame(animateStripes);
         }
 
-        createParticles();
-        animateParticles();
+        createStripes();
+        animateStripes();
+
+        // Remove splash após 3s
+        setTimeout(() => {
+            splash.style.transition = 'opacity 0.5s';
+            splash.style.opacity = 0;
+            setTimeout(()=> splash.remove(), 500);
+        }, 3000);
     </script>
 
 </body>
