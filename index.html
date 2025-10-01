@@ -67,7 +67,7 @@
             margin-top: 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             word-wrap: break-word;
-            color: #ffffe0; /* COR AJUSTADA PARA LEGIBILIDADE */
+            color: #FFD700; /* COR AJUSTADA PARA LEGIBILIDADE */
         }
 
         .cta p {
@@ -267,9 +267,9 @@
     <div class="container">
 
         <div class="cta">
-            <!-- FRASE RESPONSIVA COM COR AJUSTADA -->
+            <!-- FRASE RESPONSIVA COM COR AJUSTADA PARA GOLD -->
             <h2 class="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                       tracking-wide leading-tight" style="color: #ffffe0;">
+                       tracking-wide leading-tight" style="color: #FFD700;">
                 >>>> AQUI CRIAMOS RECORDES <<<<
             </h2>
             <p>Na KZK RC-Oficina Seu limite é a Nossa Pista de Testes.</p>
@@ -279,7 +279,6 @@
         </div>
 
         <section id="artigos">
-            <!-- SUBTÍTULO RESPONSIVO -->
             <h2 class="text-center text-gray-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mt-4">
                 ..:: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS ::..
             </h2>
@@ -341,7 +340,6 @@
 
     <!-- Script da abertura animada com partículas -->
     <script>
-        // Remover a tela de abertura após 3 segundos
         setTimeout(() => {
             const splash = document.getElementById('splash');
             splash.style.transition = 'opacity 0.5s';
@@ -349,7 +347,6 @@
             setTimeout(() => splash.remove(), 500);
         }, 3000);
 
-        // Partículas leves
         const canvas = document.getElementById('splash-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -379,12 +376,10 @@
             particles.forEach(p => {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255,215,0,0.7)'; // dourado leve
+                ctx.fillStyle = 'rgba(255,215,0,0.7)';
                 ctx.fill();
                 p.x += p.speedX;
                 p.y += p.speedY;
-
-                // Reaparecer do outro lado
                 if (p.x < 0) p.x = canvas.width;
                 if (p.x > canvas.width) p.x = 0;
                 if (p.y < 0) p.y = canvas.height;
