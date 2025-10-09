@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KV vs. Voltagem em Carros RC de Alta Velocidade: A Combinação Perfeita de Motor e ESC</title>
+  <meta name="description" content="Aprenda a combinar KV do motor e voltagem da bateria em carros RC de alta velocidade. Otimize RPM, torque e escolha o ESC ideal para máxima performance e segurança.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      ⚙️ KV vs. Voltagem – A Combinação Perfeita de Motor e ESC
+    </h1>
+
+    <p class="mb-6">
+      A performance de um carro RC elétrico de alta velocidade não depende apenas de maximizar o KV ou a voltagem separadamente. O segredo está em encontrar a combinação ideal que entregue a <strong>RPM desejada</strong> sem sobrecarregar o motor ou o ESC.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">1. Entendendo o KV (Kilovolts): Não é Tensão, é Velocidade</h2>
+    <p class="mb-4">
+      O KV de um motor brushless define sua velocidade de rotação por voltagem:
+    </p>
+    <table class="table-auto border-collapse border border-gray-300 mb-6 w-full text-left">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="border border-gray-300 px-4 py-2">KV (Kilovolts)</th>
+          <th class="border border-gray-300 px-4 py-2">Significado Prático</th>
+          <th class="border border-gray-300 px-4 py-2">Uso Comum em RC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">KV Alto (Ex: 3000KV+)</td>
+          <td class="border border-gray-300 px-4 py-2">Motor gira muito rápido com pouca voltagem.</td>
+          <td class="border border-gray-300 px-4 py-2">Carros 1/10 ou 1/12 com baixas voltagens (2S ou 3S). Aceleração rápida, mas limita a voltagem máxima segura.</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2">KV Baixo (Ex: 1500KV a 2200KV)</td>
+          <td class="border border-gray-300 px-4 py-2">Motor precisa de mais voltagem para atingir alta rotação.</td>
+          <td class="border border-gray-300 px-4 py-2">Carros 1/7 ou 1/8 de alta performance (Drag e Speed Run) com 6S, 8S ou mais. Mais eficientes e potentes sob alta carga.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="mb-6 font-semibold">Erro Comum do Iniciante:</p>
+    <p class="mb-6">
+      Comprar um motor de KV alto e combiná-lo com uma bateria de alta voltagem (6S ou 8S) pode gerar uma RPM tão alta que o motor não consegue lidar com a carga, superaquecendo rapidamente.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">2. A Escolha da Combinação Ideal (Regra da RPM)</h2>
+    <p class="mb-4">
+      O objetivo é escolher um motor e uma voltagem que, juntos, atinjam a faixa de RPM ideal para sua build sem exceder o limite do motor:
+    </p>
+    <table class="table-auto border-collapse border border-gray-300 mb-6 w-full text-left">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="border border-gray-300 px-4 py-2">Voltagem (S-Rating)</th>
+          <th class="border border-gray-300 px-4 py-2">Faixa de KV Sugerida (1/8 - 1/7)</th>
+          <th class="border border-gray-300 px-4 py-2">Aplicação Comum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">4S (14.8V)</td>
+          <td class="border border-gray-300 px-4 py-2">2200KV a 2800KV</td>
+          <td class="border border-gray-300 px-4 py-2">Bashing rápido ou Speed Runs de nível de entrada.</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2">6S (22.2V)</td>
+          <td class="border border-gray-300 px-4 py-2">1800KV a 2200KV</td>
+          <td class="border border-gray-300 px-4 py-2">Padrão de performance, equilíbrio entre potência, peso da bateria e segurança térmica.</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">8S (29.6V)</td>
+          <td class="border border-gray-300 px-4 py-2">1500KV a 1700KV</td>
+          <td class="border border-gray-300 px-4 py-2">Alta performance/recordes, exige motor KV baixo e ESC robusto para RPMs de 35.000+ com máxima eficiência.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="mb-6 font-semibold">Dica de Mestre (Cálculo Simples):</p>
+    <ul class="list-disc list-inside mb-6">
+      <li>Para um motor 1/8, tente mirar em uma RPM final sem carga entre 35.000 e 45.000 RPM.</li>
+      <li>Exemplo 1 (Certo): 8S (29.6V) × Motor 1700KV ≈ 50.320 RPM. Potência bruta ideal para Speed Run, exigindo gearing longo.</li>
+      <li>Exemplo 2 (Inadequado): 6S (22.2V) × Motor 3000KV ≈ 66.600 RPM. Rotação muito alta, irá fritar motor e ESC se o gearing for agressivo.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">3. Casamento com o ESC: A Importância da Amperagem (A)</h2>
+    <p class="mb-4">
+      O ESC deve suportar não só a voltagem da bateria, mas também a corrente que o motor pode puxar:
+    </p>
+    <table class="table-auto border-collapse border border-gray-300 mb-6 w-full text-left">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="border border-gray-300 px-4 py-2">Parâmetro do ESC</th>
+          <th class="border border-gray-300 px-4 py-2">Relevância</th>
+          <th class="border border-gray-300 px-4 py-2">Dica de Mestre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">Suporte de Voltagem</td>
+          <td class="border border-gray-300 px-4 py-2">Deve ser igual ou maior que a voltagem da bateria.</td>
+          <td class="border border-gray-300 px-4 py-2">Se motor/bateria são 6S, ESC deve ser 6S mínimo (preferencialmente 8S).</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2">Amperagem (A)</td>
+          <td class="border border-gray-300 px-4 py-2">Capacidade de fornecer corrente ao motor.</td>
+          <td class="border border-gray-300 px-4 py-2">ESC contínuo 30%-50% maior que a amperagem de pico do motor evita superaquecimento e falhas.</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">Capacitores</td>
+          <td class="border border-gray-300 px-4 py-2">Armazenam e filtram energia.</td>
+          <td class="border border-gray-300 px-4 py-2">ESCs de alta qualidade têm capacitores robustos; inchaço indica estresse de corrente excessiva.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Dicas Finais para Evitar Gastos Desnecessários</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li><strong>Comece pelo fim:</strong> defina a voltagem máxima antes de comprar o motor. Para 8S, use motor KV baixo (1500-1700) e ESC compatível.</li>
+      <li><strong>Não economize no ESC:</strong> um motor caro precisa de um ESC robusto. Subdimensionado, ele pode falhar e levar o motor junto.</li>
+      <li><strong>Monitore o Pinhão:</strong> motores de KV baixo exigem gearing mais longo. Pinhão pequeno desperdiça potência e velocidade.</li>
+    </ul>
+
+    <p class="mb-8">
+      Seguindo este guia, seu investimento em eletrônica será eficiente, durável e o mais rápido possível!
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
