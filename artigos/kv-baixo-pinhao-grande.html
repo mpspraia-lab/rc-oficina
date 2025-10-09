@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torque e Velocidade em Carros RC: Por Que o Motor de KV Baixo Exige Pinhão Grande</title>
+  <meta name="description" content="Entenda por que motores de KV baixo em carros RC de alta velocidade exigem pinhões maiores. Aprenda a ajustar gearing, otimizar torque e velocidade com eficiência e segurança.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      ⚙️ Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande
+    </h1>
+
+    <p class="mb-6">
+      Muitos entusiastas pensam: "Se o motor tem mais KV, eu aumento o pinhão. Se tem menos KV, eu diminuo." Essa é uma visão incompleta que leva ao desperdício de potencial e, ironicamente, ao superaquecimento.
+      A verdade está na natureza do <strong>torque do motor de KV mais baixo</strong>.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">1. KV Baixo = Mais Torque (A Força)</h2>
+    <p class="mb-4">
+      A constante KV do motor é inversamente proporcional ao seu torque:
+    </p>
+    <table class="table-auto border-collapse border border-gray-300 mb-6 w-full text-left">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="border border-gray-300 px-4 py-2">Característica do Motor</th>
+          <th class="border border-gray-300 px-4 py-2">Relação com a Força</th>
+          <th class="border border-gray-300 px-4 py-2">Vantagem no Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">KV Alto (Ex: 2800KV)</td>
+          <td class="border border-gray-300 px-4 py-2">Baixo Torque. Rota rapidamente e atinge o RPM rapidamente, mas com menos força para empurrar um Pinhão Grande.</td>
+          <td class="border border-gray-300 px-4 py-2">Ideal para setups leves ou para quem prioriza aceleração curta em baixas voltagens.</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="border border-gray-300 px-4 py-2">KV Baixo (Ex: 1700KV)</td>
+          <td class="border border-gray-300 px-4 py-2">Alto Torque. Rota lentamente (por volt) mas com força maciça e sustentada. É a força necessária para empurrar um Pinhão Grande na transmissão.</td>
+          <td class="border border-gray-300 px-4 py-2">Essencial para sistemas 6S/8S e para Speed Runs onde a meta é atingir a velocidade final máxima.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">2. A Função do Gearing: Multiplicar a Rotação, Não a Força</h2>
+    <p class="mb-4">
+      O <strong>gearing</strong> (relação entre Pinhão e Spur) é o ajuste que define o quão longo será o percurso do seu carro por cada rotação do motor.
+    </p>
+    <ul class="list-disc list-inside mb-6">
+      <li><strong>Pinhão Pequeno (Relação Curta)</strong>: Oferece muita multiplicação de torque. O motor gira muitas vezes para a roda girar uma vez. Ideal para arrancada, subidas e bashing.</li>
+      <li><strong>Pinhão Grande (Relação Longa)</strong>: Oferece pouca multiplicação de torque. O motor gira poucas vezes para a roda girar uma vez. Essencial para Speed Run.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">O Erro Comum: Desperdício de Potência</h2>
+    <p class="mb-4">
+      Quando um entusiasta usa um motor de KV baixo e alto torque com um Pinhão Pequeno, ele está cometendo um erro de eficiência:
+    </p>
+    <ul class="list-disc list-inside mb-6">
+      <li><strong>Motor Sobrecaregado (RPM)</strong>: O motor atinge sua RPM máxima muito rapidamente. O ESC não está sendo exigido para o que foi projetado, e você atinge o limite do gearing muito cedo.</li>
+      <li><strong>Perda de Capacidade</strong>: O alto torque do motor de KV baixo está sendo "diluído" por uma relação de marchas muito curta. Você desperdiça a capacidade do motor de empurrar uma engrenagem maior.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">3. A Lógica da Alta Velocidade (O "Pinhão Maior")</h2>
+    <p class="mb-4">
+      O objetivo do Speed Run não é acelerar mais rápido, mas acelerar por mais tempo até atingir a RPM máxima teórica do seu sistema KV/Voltagem.
+    </p>
+    <p class="mb-4">
+      Ajuste Correto: Seu motor de KV baixo (e alto torque) tem a força bruta necessária para girar um Pinhão Grande. Ao instalar o pinhão maior, você aumenta drasticamente a velocidade que o carro percorre a cada rotação do motor, sem sobrecarregar a capacidade de torque do motor.
+    </p>
+    <table class="table-auto border-collapse border border-gray-300 mb-6 w-full text-left">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="border border-gray-300 px-4 py-2">Combinação Ideal</th>
+          <th class="border border-gray-300 px-4 py-2">Por Que Funciona</th>
+          <th class="border border-gray-300 px-4 py-2">Resultado na Pista</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">KV Baixo + Pinhão Grande</td>
+          <td class="border border-gray-300 px-4 py-2">O Torque do motor é usado para empurrar o Pinhão Longo, explorando toda a faixa de RPM para a frente.</td>
+          <td class="border border-gray-300 px-4 py-2">Máxima Velocidade Final com melhor eficiência e controle de temperatura (se ajustado corretamente).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Dicas Detalhadas para o Entusiasta</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li><strong>Ajuste Gradual e Termômetro</strong>: Nunca comece com o pinhão mais longo que você tem. Comece com uma relação segura e aumente o Pinhão 1 a 2 dentes por vez. Após cada run, meça a temperatura do motor.</li>
+      <li><strong>O Alarme da Temperatura</strong>: Se, ao aumentar o pinhão, o motor começar a superaquecer rapidamente, você atingiu o limite de segurança da sua combinação KV/Voltagem para aquele setup (ou o gear mesh está errado).</li>
+      <li><strong>A Escolha da Spur</strong>: Para Speed Runs, utilize sempre uma Spur (Coroa) com o menor número de dentes possível (aumentando ainda mais a relação de marchas). Em muitos casos, você precisará de uma Spur de metal para lidar com o torque do pinhão grande.</li>
+    </ul>
+
+    <p class="mb-8">
+      Lembre-se: o motor de KV baixo não é um sinal para usar um pinhão pequeno; é uma licença para usar um pinhão grande e explorar o potencial de velocidade do seu sistema 6S/8S.
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
