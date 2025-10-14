@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenção Pós-Speed Run: Inspeção Crítica de Spool e CVDs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo customizado para as tabelas de parâmetros */
+    .tabela-parametros {
+        @apply w-full text-sm text-left border-collapse mb-8;
+    }
+    .tabela-parametros th, .tabela-parametros td {
+        @apply py-3 px-4 border-b border-gray-200;
+    }
+    .tabela-parametros thead {
+        @apply bg-blue-100 text-blue-800 font-semibold;
+    }
+    .tabela-parametros tbody tr:hover {
+        @apply bg-gray-50;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      Protocolo de Segurança: Manutenção Pós-Speed Run em Spool e CVDs
+    </h1>
+
+    <p class="mb-6">
+      Depois de atingir velocidades recordes, a fase mais importante para a longevidade e segurança do seu carro é a **Manutenção Preventiva Pós-Corrida**.
+    </p>
+
+    <p class="mb-8">
+      A transmissão — especialmente os <strong class="text-blue-600">CVDs</strong> e o <strong class="text-red-600">Spool</strong> — absorve o estresse total da potência. Se negligenciada, ela falhará catastroficamente no próximo *run*, transformando seu bólido em sucata. Detalhamos aqui o processo de inspeção para garantir que sua transmissão permaneça em condições de competição.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">1. Inspeção Crítica dos CVDs (Constant Velocity Drives)</h2>
+    <p class="mb-4">
+      Os eixos de transmissão são o elo mais vulnerável. Eles sofrem torque extremo na aceleração e compressão na frenagem.
+    </p>
+
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Ponto de Inspeção</th>
+                    <th>Sintoma de Falha</th>
+                    <th>Ação Corretiva</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pino e Encaixe</td>
+                    <td>Desgaste <strong class="text-red-600">Ovalizado (O-Valing)</strong> no furo onde o pino desliza.</td>
+                    <td>Substituição Imediata: O material está cedendo sob estresse e o pino pode falhar no próximo *run*.</td>
+                </tr>
+                <tr>
+                    <td>Integridade da Barra</td>
+                    <td>Empenamento ou torção no eixo do CVD (visível ao girar lentamente).</td>
+                    <td>Substituição Imediata: Um eixo empenado causa vibração severa em alta velocidade e perda de controle.</td>
+                </tr>
+                <tr>
+                    <td>Lados do Hex da Roda</td>
+                    <td>O hex (encaixe hexagonal) está arredondado ou com folga excessiva.</td>
+                    <td>Substitua o CVD ou o hex da roda. Evita que a roda gire em falso, superaquecendo a junta.</td>
+                </tr>
+                <tr>
+                    <td>Limpeza e Lubrificação</td>
+                    <td>Presença de poeira, areia ou detritos nos copos de transmissão.</td>
+                    <td><strong class="text-green-600">Limpeza Completa:</strong> Desmonte, limpe com desengraxante e aplique graxa de lítio de alta qualidade nos pinos e nos copos antes de remontar.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">2. Inspeção do Spool (Diferencial Travado)</h2>
+    <p class="mb-4">
+      O Spool é robusto, mas não imune a danos, especialmente na interface com a coroa (Spur) e seus rolamentos.
+    </p>
+
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Ponto de Inspeção</th>
+                    <th>Sintoma de Falha</th>
+                    <th>Ação Corretiva</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Engrenagem Principal (Spur)</td>
+                    <td>Dentes arredondados, rachaduras na base ou <strong class="text-red-600">material derretido</strong> (Spurs de nylon/plástico).</td>
+                    <td>Substituição Imediata da Spur. Dentes danificados levam ao *Gear Mesh* incorreto e à falha do Pinhão.</td>
+                </tr>
+                <tr>
+                    <td>Parafusos da Caixa</td>
+                    <td>Parafusos do Spool frouxos ou com roscas danificadas.</td>
+                    <td>Reaperto imediato. Se a rosca estiver danificada, considere substituir a carcaça.</td>
+                </tr>
+                <tr>
+                    <td>Ruído Estranho</td>
+                    <td>Sons metálicos (rangido ou batida) vindos da caixa.</td>
+                    <td>Desmontagem e Inspeção Total: O mais provável é um **rolamento (bearing) danificado** na caixa de diferencial, que precisa ser trocado imediatamente.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">3. Inspeção de Rolamentos (Bearings)</h2>
+    <p class="mb-4">
+      Os rolamentos são vitais para a eficiência. Se falharem, criam arrasto, forçando o motor e o ESC a superaquecer.
+    </p>
+
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
+      ⚙️ <strong>Teste Simples:</strong> Remova os CVDs e gire a roda/eixo com os dedos. O rolamento deve girar <strong class="font-bold">livre e suavemente</strong>, sem qualquer aspereza, travamento ou ruído de "areia".
+    </div>
+    
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong>Sintoma:</strong> Se o rolamento estiver áspero, ele está danificado por sujeira ou calor excessivo.</li>
+      <li><strong>Ação:</strong> Limpe e lubrifique. Se continuar áspero, <strong class="text-red-600">substitua-o</strong>. Um rolamento com arrasto significativo pode custar vários km/h na reta final.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Conclusão: Confiabilidade é Recorde</h2>
+    <p class="mb-8">
+      A **Manutenção Preventiva** não é apenas sobre consertar o que quebrou, mas sobre substituir o que está desgastado <strong class="text-blue-600">antes que cause uma falha em alta velocidade</strong>. No nicho de Speed Run, a Confiabilidade é o seu maior trunfo. Com este protocolo, você garante que todo o seu investimento em potência será traduzido em quilometragem segura e consistente.
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
