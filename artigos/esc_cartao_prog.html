@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚙️ Cartão de Programação do ESC: O Segredo do Setup de Performance</title>
+  <title>Cartão de Programação do ESC: O Segredo do Setup de Performance</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo customizado para as tabelas de parâmetros */
+    .tabela-parametros {
+        @apply w-full text-sm text-left border-collapse mb-8;
+    }
+    .tabela-parametros th, .tabela-parametros td {
+        @apply py-3 px-4 border-b border-gray-200;
+    }
+    .tabela-parametros thead {
+        @apply bg-blue-100 text-blue-800 font-semibold;
+    }
+    .tabela-parametros tbody tr:hover {
+        @apply bg-gray-50;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
@@ -14,72 +29,155 @@
     </h1>
 
     <p class="mb-6">
-      O <strong>Electronic Speed Controller (ESC)</strong> é o cérebro do seu carro elétrico, mas ele só opera em seu potencial máximo quando é devidamente configurado. É aqui que entra o <strong>Cartão de Programação</strong> — a interface essencial que traduz sua ambição por velocidade em comandos digitais precisos.
+      O Electronic Speed Controller (ESC) é o cérebro do seu carro elétrico, mas ele só opera em seu potencial máximo quando é devidamente configurado. É aqui que entra o <strong class="text-blue-600">Cartão de Programação</strong>. Ele é a interface essencial que permite traduzir sua ambição por velocidade em comandos digitais precisos.
     </p>
 
     <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">O Que É o Cartão de Programação?</h2>
+    <p class="mb-4">
+      O Cartão de Programação é um dispositivo eletrônico, geralmente do tamanho de um cartão de crédito (ou uma caixa de bolso com tela LCD), que se conecta diretamente ao seu ESC via porta de programação ou cabo de servo.
+    </p>
     <p class="mb-6">
-      O Cartão de Programação é um pequeno dispositivo eletrônico, do tamanho de um cartão de crédito ou uma caixa de bolso com tela LCD, que se conecta diretamente ao ESC por meio da porta de programação ou do cabo de servo.  
-      Em vez de decifrar bipes e piscadas, ele oferece uma interface visual simples para alterar parâmetros cruciais — permitindo ajustes rápidos, precisos e repetíveis.
+      Em vez de usar comandos complicados pelo controle (piscadas de LED e bipes), o cartão oferece uma <strong class="text-blue-600">interface visual simples</strong> para alterar parâmetros cruciais, permitindo ajustes rápidos, precisos e repetíveis.
     </p>
 
     <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Por Que Usar o Cartão de Programação?</h2>
     <p class="mb-4">
-      Em um projeto de alta performance, não basta ter um ESC potente — é preciso ajustá-lo com precisão micrométrica.  
-      Com o cartão, você ganha controle total sobre o comportamento eletrônico do carro:
+      Em um nicho de alta performance, não basta ter um ESC potente; é preciso ajustá-lo com precisão micrométrica.
     </p>
-
-    <ul class="list-disc list-inside mb-6">
-      <li><strong>Segurança e Proteção:</strong> Define o <em>Cutoff Voltage</em> exato para proteger suas baterias e ativa proteções térmicas automáticas.</li>
-      <li><strong>Performance Máxima:</strong> Ajusta o <em>Timing</em> e o <em>Punch</em> do motor para equilibrar aceleração e velocidade final.</li>
-      <li><strong>Repetibilidade:</strong> Permite salvar setups específicos para diferentes condições de pista — frio, quente, úmido ou seco.</li>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong class="text-green-700">Segurança e Proteção:</strong> Você define o <strong class="text-green-700">Cutoff Voltage</strong> exato para proteger suas baterias caras e configura proteções de temperatura.</li>
+      <li><strong class="text-blue-700">Performance Máxima:</strong> Você controla o <strong class="text-blue-700">Timing e o Punch</strong> do motor para maximizar o RPM ou otimizar a tração na largada.</li>
+      <li><strong class="text-gray-700">Repetibilidade:</strong> Em testes e competições, você pode salvar e recarregar um setup de ESC específico para diferentes condições de pista (asfalto quente ou frio, por exemplo).</li>
     </ul>
 
-    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 mb-6">
-      💡 <strong>Dica:</strong> Se você faz <em>Speed Runs</em> sérios, o cartão de programação é o seu “laboratório portátil”. Ele garante consistência e evita surpresas no asfalto.
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🛠️ Parâmetros Cruciais Ajustáveis pelo Cartão de Programação</h2>
+    <p class="mb-4">
+      Os ESCs modernos de alta performance (principalmente modelos brushless) oferecem uma vasta gama de ajustes. Abaixo estão os parâmetros mais importantes que você deve dominar para um setup vencedor:
+    </p>
+
+    <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-500">1. Ajustes de Motor e Força Bruta</h3>
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Parâmetro</th>
+                    <th>Função</th>
+                    <th>Impacto na Performance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Timing / Avanço de Fase (Motor Timing)</td>
+                    <td>Controla a fase de disparo do motor. Ajuste mais crítico para velocidade.</td>
+                    <td><strong class="text-red-600">Maior Timing = Mais RPM / Mais Velocidade</strong> (Mas exige refrigeração extrema).</td>
+                </tr>
+                <tr>
+                    <td>Punch Rate / Start Power</td>
+                    <td>Define a agressividade da aceleração inicial.</td>
+                    <td>Alto Punch é bom para arrancada, mas pode causar perda de tração (wheelie) ou instabilidade.</td>
+                </tr>
+                <tr>
+                    <td>Aceleração Inicial (Start Mode)</td>
+                    <td>Controla a suavidade com que o motor começa a girar.</td>
+                    <td>Essencial em motores sensored para largadas ultra-suaves.</td>
+                </tr>
+                <tr>
+                    <td>Modo de Funcionamento (Running Mode)</td>
+                    <td>Define se o ESC permite apenas: Frente (Forward Only), Frente e Freio (Fwd/Brake) ou Frente, Freio e Ré (Fwd/Brake/Reverse).</td>
+                    <td>Em Speed Runs, o modo Fwd/Brake é comum, pois a ré não é necessária.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🛠️ Parâmetros Cruciais Ajustáveis</h2>
-    <p class="mb-4">
-      ESCs modernos de alta performance — especialmente os modelos <strong>brushless</strong> — oferecem dezenas de parâmetros configuráveis. Estes são os que mais influenciam sua performance:
-    </p>
+    <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-500">2. Ajustes de Freio e Controle</h3>
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Parâmetro</th>
+                    <th>Função</th>
+                    <th>Impacto na Performance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Força de Freio (Brake Force)</td>
+                    <td>Potência máxima do freio quando o comando é acionado.</td>
+                    <td>Crucial para parar a máquina com segurança após um Speed Run.</td>
+                </tr>
+                <tr>
+                    <td>Drag Brake (Freio Neutro)</td>
+                    <td>Aplica uma porcentagem de freio automaticamente quando o acelerador está em posição neutra.</td>
+                    <td>Simula o arrasto do motor, ajudando na estabilidade em curvas (circuito) ou na desaceleração controlada.</td>
+                </tr>
+                <tr>
+                    <td>Força de Freio Inicial (Initial Brake)</td>
+                    <td>O freio aplicado nos primeiros milissegundos do comando.</td>
+                    <td>Ajuda a evitar travamento de roda ao frear bruscamente em alta velocidade.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <h3 class="text-xl font-semibold mb-3 text-blue-500">1. Ajustes de Motor e Força Bruta</h3>
-    <ul class="list-disc list-inside mb-6">
-      <li><strong>Timing (Avanço de Fase):</strong> Aumenta o RPM e a velocidade, mas também o calor — ideal para setups com boa refrigeração.</li>
-      <li><strong>Punch / Start Power:</strong> Define a agressividade da arrancada; alto punch gera aceleração explosiva, mas pode comprometer a tração.</li>
-      <li><strong>Modo de Funcionamento:</strong> Em <em>Speed Runs</em>, use “Fwd/Brake” — a ré é desnecessária e reduz segurança em alta velocidade.</li>
-    </ul>
+    <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-500">3. Ajustes de Segurança e Bateria</h3>
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Parâmetro</th>
+                    <th>Função</th>
+                    <th>Impacto na Performance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cutoff Voltage / LVC (Low Voltage Cutoff)</td>
+                    <td>O limite mínimo de voltagem por célula antes do ESC cortar a potência.</td>
+                    <td><strong class="text-red-600">Ajuste obrigatório para proteger suas baterias Li-Po/Li-HV</strong> contra danos por descarga excessiva.</td>
+                </tr>
+                <tr>
+                    <td>Proteção de Temperatura (Thermal Protection)</td>
+                    <td>Limite de temperatura do ESC e, em alguns modelos, do motor.</td>
+                    <td>Desliga o sistema para evitar a queima. Essencial quando se utiliza alto Timing.</td>
+                </tr>
+                <tr>
+                    <td>Tipo de Bateria (Battery Type)</td>
+                    <td>Define se o ESC deve calcular o Cutoff para Li-Po ou NiMH/NiCd.</td>
+                    <td>Garante que o LVC seja aplicado corretamente (mais baixo para NiMH e preciso para Li-Po).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <h3 class="text-xl font-semibold mb-3 text-blue-500">2. Ajustes de Freio e Controle</h3>
-    <ul class="list-disc list-inside mb-6">
-      <li><strong>Brake Force:</strong> Define a potência máxima de frenagem — vital para parar a máquina com segurança após um run.</li>
-      <li><strong>Drag Brake:</strong> Simula o arrasto do motor e ajuda na estabilidade durante desaceleração.</li>
-      <li><strong>Initial Brake:</strong> Controla a resposta inicial, evitando travamento de rodas em altas velocidades.</li>
-    </ul>
-
-    <h3 class="text-xl font-semibold mb-3 text-blue-500">3. Segurança e Proteção</h3>
-    <ul class="list-disc list-inside mb-6">
-      <li><strong>Cutoff Voltage:</strong> Define o ponto em que o ESC corta a potência para proteger suas LiPos.</li>
-      <li><strong>Proteção Térmica:</strong> Desliga automaticamente o sistema em caso de superaquecimento.</li>
-      <li><strong>Tipo de Bateria:</strong> LiPo, LiHV ou NiMH — define como o ESC calcula os limites de segurança.</li>
-    </ul>
-
-    <h3 class="text-xl font-semibold mb-3 text-blue-500">4. Configurações Avançadas</h3>
-    <ul class="list-disc list-inside mb-6">
-      <li><strong>Frequência PWM:</strong> Controla a suavidade e eficiência do motor — valores altos (32 kHz) reduzem ruído e vibração.</li>
-      <li><strong>Modo Sensored / Sensorless:</strong> O modo sensored entrega aceleração linear e previsível, ideal para arrancadas de precisão.</li>
-    </ul>
-
-    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
-      ⚙️ <strong>Dica de Expert:</strong> Teste um parâmetro por vez e anote os resultados. Pequenas variações em <em>Timing</em> e <em>Punch</em> podem transformar completamente o comportamento do carro.
+    <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-500">4. Ajustes Avançados e Sincronismo</h3>
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Parâmetro</th>
+                    <th>Função</th>
+                    <th>Impacto na Performance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frequência PWM (PWM Frequency)</td>
+                    <td>A frequência de modulação por largura de pulso usada para controlar a potência.</td>
+                    <td>Frequências mais altas (ex: 32 kHz) podem melhorar a suavidade e a eficiência, mas podem gerar mais calor no ESC.</td>
+                </tr>
+                <tr>
+                    <td>Motor Sensored/Sensorless</td>
+                    <td>Define como o ESC detecta a posição do rotor.</td>
+                    <td>O modo <strong class="text-blue-600">Sensored</strong> (com sensor) oferece aceleração mais suave e linear em baixas velocidades, ideal para competições de arrancada (drag).</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Conclusão</h2>
     <p class="mb-8">
-      Dominar o <strong>Cartão de Programação do ESC</strong> é o passo final para extrair todo o potencial da sua eletrônica.  
-      Ele é o elo entre potência e controle — permitindo que cada watt de energia seja convertido em velocidade com segurança, eficiência e precisão.  
-      Se você busca <em>performance real</em> em alta velocidade, este é o upgrade invisível que faz toda a diferença.
+      Dominar o Cartão de Programação é o passo final para garantir que a sua eletrônica esteja não apenas potente, mas também segura e totalmente otimizada para o seu objetivo de velocidade.
     </p>
 
     <div class="text-center mb-8">
@@ -91,4 +189,3 @@
 
 </body>
 </html>
-
