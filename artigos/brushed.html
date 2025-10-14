@@ -3,94 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Enigma do "T" nos Motores Brushed de RC | KZK RC-Oficina</title>
+  <title>O Enigma do "T" nos Motores Brushed de RC: Velocidade, Torque e Voltas</title>
   <meta name="description" content="Guia completo sobre o significado do 'T' nos motores brushed de RC. Entenda como o número de voltas afeta velocidade, torque e consumo de energia.">
-  <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo customizado para as tabelas de parâmetros */
+    .tabela-parametros {
+        @apply w-full text-sm text-left border-collapse mb-8 shadow-md rounded-lg;
+    }
+    .tabela-parametros th, .tabela-parametros td {
+        @apply py-3 px-4 border-b border-gray-200;
+    }
+    .tabela-parametros thead {
+        @apply bg-blue-100 text-blue-800 font-semibold;
+    }
+    .tabela-parametros tbody tr:hover {
+        @apply bg-gray-50;
+    }
+    /* Estilo para listas */
+    .content-list {
+        @apply list-disc list-inside space-y-2 mb-6;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
-<header>
-  <h1>⚙️ O Enigma do "T" nos Motores Brushed de RC</h1>
-  <p>Guia completo para entusiastas de alta performance RC</p>
-</header>
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      ⚙️ O Enigma do "T" nos Motores Brushed de RC: A Relação Torque-Velocidade
+    </h1>
 
-<main>
-  <article>
-    <p>Se você já explorou o mundo dos carros de controle remoto (RC) com motorização brushed (escovada), certamente se deparou com números como <strong>9T</strong>, <strong>12T</strong>, <strong>21T</strong> ou <strong>55T</strong>. Essa simples letra, seguida de um número, é a informação mais crucial sobre o desempenho do seu motor.</p>
+    <p class="mb-6">
+      Se você já explorou o mundo dos carros de controle remoto (RC) com motorização *brushed* (escovada), certamente se deparou com números como <strong class="text-blue-600">9T, 12T, 21T ou 55T</strong>. Essa simples letra, seguida de um número, é a informação mais crucial sobre o desempenho do seu motor.
+    </p>
 
-    <p>Mas o que exatamente esse "T" significa? E como a escolha entre um 9T e um 55T pode transformar a experiência do seu veículo RC?</p>
+    <p class="mb-8">
+      Mas o que exatamente esse **"T"** significa? E como a escolha entre um 9T e um 55T pode transformar a experiência do seu veículo RC, seja ele um bólido de velocidade ou um *rock crawler*?
+    </p>
 
-    <h2>🔍 O que significa o "T"?</h2>
-    <p>A sigla <strong>"T"</strong> vem do inglês <em>Turns</em> e significa, simplesmente, <strong>Voltas</strong> ou <strong>Espiras</strong>. Ela representa o número de vezes que o fio de cobre foi enrolado em torno de cada polo do rotor do motor. Este é o fator principal que determina o desempenho final em termos de velocidade (RPM) e torque (força).</p>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🔍 O que Significa o "T" (Turns)?</h2>
+    <p class="mb-4">
+      A sigla **"T"** vem do inglês *Turns* e significa, simplesmente, **Voltas** ou **Espiras**.
+    </p>
+    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 mb-6">
+      O número de "T" representa o número de vezes que o fio de cobre foi enrolado em torno de cada polo do rotor do motor. Este é o fator principal que determina o desempenho final em termos de **velocidade (RPM)** e **torque (força)**.
+    </div>
 
-    <h2>⚖️ A Relação Inversa: Desempenho vs. Número de "T"</h2>
-    <p>A regra de ouro nos motores brushed é simples: quanto <strong>menor o número de T</strong>, <strong>maior a velocidade</strong> e <strong>menor o torque</strong> — e vice-versa.</p>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">⚖️ A Regra de Ouro: Desempenho vs. Número de "T"</h2>
+    <p class="mb-4">
+      A relação nos motores *brushed* é <strong class="text-red-600">inversa</strong>: quanto **menor o número de T**, **maior a velocidade** e **menor o torque** — e vice-versa.
+    </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Número de Voltas (T)</th>
-          <th>RPM (Velocidade)</th>
-          <th>Torque (Força)</th>
-          <th>Consumo de Bateria</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Menor T (Ex: 9T)</td><td>Alto (Rápido)</td><td>Baixo (Fraco)</td><td>Alto (Descarga rápida)</td></tr>
-        <tr><td>Maior T (Ex: 55T)</td><td>Baixo (Lento)</td><td>Alto (Forte)</td><td>Baixo (Economiza)</td></tr>
-      </tbody>
-    </table>
-
-    <h2>🚗 Motores com Baixo "T" (Alta Velocidade)</h2>
-    <ul>
-      <li><strong>Exemplos:</strong> 9T, 12T, 15T</li>
-      <li><strong>Características:</strong> Poucas e grossas espiras de fio.</li>
-      <li><strong>Desempenho:</strong> Muita velocidade final, mas baixo torque.</li>
-      <li><strong>Aplicações:</strong> Circuitos on-road e buggies de competição.</li>
-      <li><strong>Atenção:</strong> Consomem mais energia e exigem ESC robusto e boa refrigeração.</li>
+    <div class="overflow-x-auto">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Número de Voltas (T)</th>
+                    <th>RPM (Velocidade)</th>
+                    <th>Torque (Força)</th>
+                    <th>Consumo de Bateria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong class="text-red-600">Menor T</strong> (Ex: 9T)</td><td><strong class="text-red-600">Alto</strong> (Rápido)</td><td>Baixo (Fraco)</td><td><strong class="text-red-600">Alto</strong> (Descarga rápida)</td></tr>
+                <tr><td><strong class="text-green-600">Maior T</strong> (Ex: 55T)</td><td>Baixo (Lento)</td><td><strong class="text-green-600">Alto</strong> (Forte)</td><td>Baixo (Economiza)</td></tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🚗 Aplicação 1: Baixo "T" (Alta Velocidade)</h2>
+    <ul class="content-list">
+      <li><strong>Exemplos:</strong> 9T, 12T, 15T.</li>
+      <li><strong>Fio:</strong> Poucas e grossas espiras.</li>
+      <li><strong>Desempenho:</strong> Muita velocidade final.</li>
+      <li><strong>Aplicações:</strong> Circuitos *on-road* e *buggies* de competição.</li>
+      <li><strong class="text-red-600">Atenção:</strong> Consomem mais energia e exigem ESC robusto e boa refrigeração para evitar o superaquecimento.</li>
     </ul>
 
-    <h2>🧗 Motores com Alto "T" (Alto Torque)</h2>
-    <ul>
-      <li><strong>Exemplos:</strong> 35T, 45T, 55T, 80T</li>
-      <li><strong>Características:</strong> Muitas espiras de fio fino.</li>
-      <li><strong>Desempenho:</strong> Alto torque em baixa rotação, ideais para precisão e força.</li>
-      <li><strong>Aplicações:</strong> Rock Crawlers, scale trucks e veículos off-road.</li>
-      <li><strong>Vantagem:</strong> Maior eficiência e menor geração de calor.</li>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🧗 Aplicação 2: Alto "T" (Alto Torque)</h2>
+    <ul class="content-list">
+      <li><strong>Exemplos:</strong> 35T, 45T, 55T, 80T.</li>
+      <li><strong>Fio:</strong> Muitas espiras de fio fino.</li>
+      <li><strong>Desempenho:</strong> Alto torque em baixa rotação, ideais para precisão e força lenta.</li>
+      <li><strong>Aplicações:</strong> *Rock Crawlers*, *scale trucks* e veículos *off-road* técnicos.</li>
+      <li><strong>Vantagem:</strong> Maior eficiência, menor consumo de bateria e menor geração de calor.</li>
     </ul>
 
-    <h2>🧠 Entendendo os Detalhes</h2>
-    <h3>1. Single vs. Double/Triple (Enrolamentos Múltiplos)</h3>
-    <p>Além do número de voltas (T), o tipo de enrolamento faz diferença:</p>
-    <ul>
-      <li><strong>Single:</strong> Um fio grosso, bom equilíbrio entre RPM e torque.</li>
-      <li><strong>Double / Triple:</strong> Fios finos em paralelo, mais torque inicial e eficiência.</li>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🧠 Entendendo os Detalhes do Enrolamento</h2>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">1. Enrolamento (Single vs. Double/Triple)</h3>
+    <p class="mb-4">
+      Além do número de voltas (T), o tipo de enrolamento também afeta a performance:
+    </p>
+    <ul class="content-list">
+      <li><strong>Single:</strong> Utiliza um fio grosso. Bom equilíbrio entre RPM e torque.</li>
+      <li><strong>Double / Triple:</strong> Utiliza múltiplos fios finos em paralelo. Isso aumenta a área de contato elétrico, resultando em mais torque inicial e melhor eficiência.</li>
     </ul>
 
-    <h3>2. Timing (Avanço)</h3>
-    <p>O <strong>timing</strong> altera o momento em que o campo magnético é ativado:</p>
-    <ul>
-      <li><strong>Timing avançado:</strong> Aumenta RPM e calor, reduz torque.</li>
-      <li><strong>Timing neutro:</strong> Melhor para crawlers, garante força igual em ambas direções.</li>
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">2. Timing (Avanço de Fase)</h3>
+    <p class="mb-4">
+      O **timing** altera o momento em que o campo magnético é ativado. Em motores *brushed*, geralmente é ajustado fisicamente girando a tampa do motor:
+    </p>
+    <ul class="content-list">
+      <li><strong>Timing avançado:</strong> <strong class="text-red-600">Aumenta o RPM</strong> e o calor, reduzindo levemente o torque.</li>
+      <li><strong>Timing neutro:</strong> Melhor para *crawlers* e veículos que precisam de força igual em ambas as direções (frente e ré).</li>
     </ul>
 
-    <h2>🧩 Dicas para Escolher o Seu "T"</h2>
-    <ul>
-      <li><strong>Prioridade:</strong> Escolha entre velocidade (baixo T) ou força (alto T).</li>
-      <li><strong>ESC e Bateria:</strong> Motores rápidos exigem ESCs potentes e baterias com alto C-Rate.</li>
-      <li><strong>Ambiente:</strong> Crawlers se beneficiam de 45T–80T; on-road, de 9T–15T.</li>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">🧩 Dicas Finais para Escolher o Seu "T"</h2>
+    <ul class="content-list">
+      <li><strong>Prioridade:</strong> Escolha sempre com base na sua prioridade: velocidade final (baixo T) ou força e autonomia (alto T).</li>
+      <li><strong>ESC e Bateria:</strong> Lembre-se que motores rápidos exigem ESCs mais potentes e baterias com alto C-Rate para suportar a alta demanda de corrente.</li>
+      <li><strong>Ambiente:</strong> Se você pilota em terrenos irregulares e precisa de controle, opte por T alto. Se você está em uma pista plana e quer velocidade pura, opte por T baixo.</li>
     </ul>
 
-    <p>🔧 Entender o significado do "T" é o primeiro passo para extrair o máximo desempenho e durabilidade do seu motor brushed. Escolha sabiamente — e transforme seu próximo passeio RC em uma experiência ainda mais precisa e empolgante!</p>
-  </article>
+    <p class="mt-6 mb-8">
+      🔧 Entender o significado do "T" é o primeiro passo para extrair o máximo desempenho e durabilidade do seu motor *brushed*. Escolha sabiamente — e transforme seu próximo passeio RC em uma experiência ainda mais precisa e empolgante!
+    </p>
 
-  <p><a href="index.html" class="voltar">⬅️ Voltar à página inicial</a></p>
-</main>
-
-<footer>
-  <p>&copy; 2025 KZK RC-Oficina | Engenharia e Performance RC</p>
-</footer>
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
 
 </body>
 </html>
-
