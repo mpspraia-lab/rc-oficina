@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timing e Punch no ESC: O Turbo Gratuito para a Velocidade de Competição RC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo customizado para as tabelas de parâmetros */
+    .tabela-parametros {
+        @apply w-full text-sm text-left border-collapse mb-8;
+    }
+    .tabela-parametros th, .tabela-parametros td {
+        @apply py-3 px-4 border-b border-gray-200;
+    }
+    .tabela-parametros thead {
+        @apply bg-blue-100 text-blue-800 font-semibold;
+    }
+    .tabela-parametros tbody tr:hover {
+        @apply bg-gray-50;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      Timing e Punch: O Turbo Gratuito para a Velocidade Máxima de Competição
+    </h1>
+
+    <p class="mb-6">
+      O <strong class="text-blue-600">Timing</strong> e o <strong class="text-blue-600">Punch</strong> são os dois ajustes mais críticos para extrair a máxima performance de qualquer máquina elétrica. Eles representam a linha divisória entre um carro de hobby e um bólido de competição pronto para quebrar recordes.
+    </p>
+
+    <p class="mb-8">
+      Enquanto a voltagem (S-Rating) e o KV do motor definem o potencial máximo de velocidade, são esses ajustes no ESC que determinam o quão rápido e quão agressivamente essa potência é liberada. A capacidade de manipulá-los com precisão justifica o investimento em um ESC de alta performance.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">1. Timing (Avanço de Fase): O Overclock do Motor</h2>
+    <p class="mb-4">
+      O Timing é o ajuste que controla o momento em que o ESC envia energia para as bobinas do motor brushless. Ele é a forma como você otimiza a eficiência da "queima" elétrica.
+    </p>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">O que a Variação do Timing faz?</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong>Baixo Timing (Conservador):</strong> Oferece torque forte em baixas RPM. O motor opera mais frio e o consumo de bateria é mais eficiente.</li>
+      <li><strong>Alto Timing (Agressivo):</strong> O ESC avança o ponto de disparo, permitindo que o motor atinja um <strong class="text-red-600">RPM final muito mais alto</strong>. Isso significa mais velocidade em linha reta.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">O Dilema da Alta Performance</h3>
+    <p class="mb-4">
+      A busca por alta velocidade exige o Timing mais alto possível, mas isso traz uma consequência direta e perigosa:
+    </p>
+
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Desafio</th>
+                    <th>Consequência</th>
+                    <th>Ação Necessária</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Geração de Calor Extrema</td>
+                    <td>O motor e o ESC <strong class="text-red-600">superaquecem</strong>, podendo levar à falha e à queima de componentes.</td>
+                    <td>Monitoramento constante (termômetro/telemetria) e ventoinhas duplas/triplas obrigatórias.</td>
+                </tr>
+                <tr>
+                    <td>Ganho Exponencial de RPM</td>
+                    <td>O aumento do RPM exige que o <strong class="text-blue-700">gearing seja ajustado</strong> (aumentando o pinhão) para aproveitar o ganho de rotação.</td>
+                    <td>Reajuste metódico do pinhão após cada aumento significativo de Timing.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 mb-6">
+      💡 <strong>Toque de Mestre (Speed Run):</strong> O piloto experiente ajusta o Timing até o limite exato onde o motor atinge o pico de velocidade sem ultrapassar a temperatura de segurança (geralmente abaixo de 90°C).
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">2. Punch (Taxa de Aceleração Inicial): A Largada Vencedora</h2>
+    <p class="mb-4">
+      O Punch (ou Punch Rate / Start Power) define a agressividade da curva de aceleração nos primeiros momentos em que o gatilho é acionado. É a capacidade do ESC de entregar a corrente máxima da bateria de forma instantânea.
+    </p>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">O que a Variação do Punch faz?</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong>Alto Punch:</strong> O carro responde de forma <strong class="text-green-700">instantânea e explosiva</strong>. Essencial em Drag RC, onde a largada conta cada milissegundo.</li>
+      <li><strong>Baixo Punch:</strong> A aceleração é suave e progressiva. Usado em circuitos para evitar que as rodas girem em falso (spin) ou que a traseira deslize em saídas de curva.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">O Dilema do Controle (4S e Acima)</h3>
+    <p class="mb-4">
+      Em carros de alta potência, um Punch muito alto pode ser catastrófico:
+    </p>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong class="text-red-600">Wheelie (Empinar):</strong> A força excessiva levanta as rodas dianteiras descontroladamente, desperdiçando tração.</li>
+      <li><strong class="text-red-600">Perda de Tração:</strong> O *wheel spin* extremo superaquece os pneus e causa perda de controle lateral.</li>
+    </ul>
+
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
+      ⚙️ <strong>Toque de Mestre (Drag RC):</strong> O Punch deve ser ajustado em conjunto com a suspensão (Squat) para encontrar o ponto ideal em que o carro acelera o máximo possível sem queimar os pneus ou empinar demais.
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Por Que o Cartão de Programação é Essencial</h2>
+    <p class="mb-4">
+      Ajustar esses parâmetros em um ESC básico é impossível ou impreciso (feitos por bipes). O Cartão de Programação é obrigatório para o setup de competição, pois oferece:
+    </p>
+    
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Benefício para Timing e Punch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ajuste Gradual (Graus e Percentagens)</td>
+                    <td>Permite ajustar o Timing em incrementos de 1 grau (ex: de 50º para 51º) ou o Punch em percentagens exatas, garantindo precisão micrométrica.</td>
+                </tr>
+                <tr>
+                    <td>Acesso a Turbo Timing / Boost</td>
+                    <td>Permite ativar um avanço extra de Timing acionado apenas no final da reta (WOT - Wide Open Throttle), maximizando o RPM para o pico de velocidade.</td>
+                </tr>
+                <tr>
+                    <td>Repetibilidade (Perfis)</td>
+                    <td>Permite salvar o "Perfil de Arrancada" e o "Perfil de Speed Run" na memória do cartão, facilitando a troca rápida de setups.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Conclusão</h2>
+    <p class="mb-8">
+      Dominar o <strong class="text-blue-600">Timing e o Punch</strong> não é apenas uma questão de técnica, mas de sobrevivência e otimização da sua máquina de alta performance. Use o Cartão de Programação, respeite o termômetro e prepare-se para sentir a verdadeira diferença entre ligar um carro e pilotar um bólido de competição.
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
