@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KZK RC-Oficina | Manutenção, Diagnóstico e Performance em Carros RC</title>
 
-    <!-- 🔍 SEO -->
-    <meta name="description" content="KZK RC-Oficina – Diagnóstico eletrônico, conserto, ajustes e aprimoramentos de desempenho em carros de controle remoto de alta performance.">
-    <meta name="keywords" content="carros RC, manutenção RC, diagnóstico eletrônico RC, oficina RC, performance RC, Arrma Limitless, KZK 160, speed run RC, fibra de carbono RC, ajustes RC, aprimoramentos RC">
+    <!-- SEO -->
+    <meta name="description" content="KZK RC-Oficina – Diagnósticos, conserto, ajustes e aprimoramentos de desempenho em carros de controle remoto de alta performance. Artigos técnicos, glossário e projetos." />
+    <meta name="keywords" content="carros RC, manutenção RC, diagnóstico eletrônico RC, conserto RC, performance RC, speed run RC, fibra de carbono RC, Arrma Limitless, KZK 160, LiPo, ESC, motor sensored, drag race RC" />
 
-    <!-- 📱 Open Graph -->
-    <meta property="og:title" content="KZK RC-Oficina | Performance e Diagnóstico em Carros RC">
-    <meta property="og:description" content="Diagnósticos, conserto e soluções em projetos de carros RC de alta performance.">
-    <meta property="og:image" content="https://mpspraia-lab.github.io/rc-oficina/imagens/rc-banner.jpg">
-    <meta property="og:url" content="https://mpspraia-lab.github.io/rc-oficina/">
-    <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="KZK RC-Oficina | Performance e Diagnóstico em Carros RC" />
+    <meta property="og:description" content="Diagnósticos, conserto e soluções para projetos de carros RC de alta performance. Artigos, glossário e projetos." />
+    <meta property="og:image" content="https://mpspraia-lab.github.io/rc-oficina/imagens/rc-banner.jpg" />
+    <meta property="og:url" content="https://mpspraia-lab.github.io/rc-oficina/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Schema JSON-LD (structured data) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "KZK RC-Oficina",
+      "url": "https://mpspraia-lab.github.io/rc-oficina/",
+      "logo": "https://mpspraia-lab.github.io/rc-oficina/imagens/logo.png",
+      "description": "Diagnósticos, conserto, ajustes e aprimoramentos de desempenho em carros de controle remoto de alta performance.",
+      "email": "mailto:mpspraia@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcos K. Peixoto"
+      },
+      "sameAs": [
+        "https://github.com/mpspraia-lab"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "mpspraia@gmail.com",
+        "availableLanguage": "pt-BR"
+      }]
+    }
+    </script>
 
     <style>
         :root {
@@ -119,6 +145,7 @@
         #artigos h2 {
             text-align: center;
             font-size: 1.8em;
+            word-wrap: break-word;
         }
 
         .article-list {
@@ -212,12 +239,12 @@
 
         @media (max-width: 600px) {
             header h1 { font-size: 1.8em; }
-            .cta h2 { font-size: 1.5em; }
-            #artigos h2 { font-size: 1.5em; }
+            .cta h2 { font-size: 1.5em; line-height: 1.3; }
+            #artigos h2 { font-size: 1.5em; line-height: 1.3; }
             .article-list { grid-template-columns: 1fr; }
         }
 
-        /* ====== SPLASH ANIMAÇÃO ESTRADA ====== */
+        /* ====== SPLASH ESTILO ESTRADA ====== */
         #splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #111; display: flex; align-items: center; justify-content: center; z-index: 9999; overflow: hidden; }
         #splash-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .side-stripe-left, .side-stripe-right { position: absolute; top: 0; width: 10%; height: 100%; background: #666; z-index: 1; }
@@ -229,7 +256,7 @@
 </head>
 <body>
 
-    <!-- Splash inicial -->
+    <!-- Splash de abertura -->
     <div id="splash">
         <canvas id="splash-canvas"></canvas>
         <div class="side-stripe-left"></div>
@@ -239,24 +266,57 @@
 
     <header>
         <h1>KZK RC-OFICINA</h1>
-        <p>Manutenção e soluções técnicas para carros de RC de alta performance</p>
+        <p>Manutenção e Preparação de Carros RC para Velocidade Extrema e Alto Desempenho.</p>
     </header>
 
     <div class="container">
         <div class="cta">
-            <h2>> AQUI CRIAMOS RECORDES <<</h2>
+            <h2 class="text-center" style="color: #FFD700;">>> AQUI CRIAMOS RECORDES <<</h2>
             <p>Na KZK RC-Oficina, seu limite é a nossa pista de testes. Superar limites é nossa especialidade.</p>
             <p>Diagnósticos, conserto, ajustes, aprimoramentos de desempenho e soluções para projetos de carros de RC de alta performance.</p>
             <a href="#artigos">COMECE A SUPERAÇÃO AGORA!</a>
         </div>
 
         <section id="artigos">
-            <h2>Artigos Essenciais para Entusiastas RC</h2>
-            <p>Explore conteúdos técnicos sobre medições, upgrades, fibra de carbono e setups para alta velocidade.</p>
+            <h2 class="text-center">..: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS :..</h2>
+            <p>Acelere seu aprendizado com nossa biblioteca de conhecimento acumulado em mais de duas décadas de prática.</p>
             <ul class="article-list">
-                <li><a href="artigos/gyro-em-carros-de-rc.html">Gyro em Carros de RC: Vale a Pena Usar em Alta Velocidade?</a></li>
-                <li><a href="artigos/onde-testar-seu-projeto-kzk160.html">Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+</a></li>
-                <li><a href="artigos/pecas-de-fibra-de-carbono.html">Onde Encontrar Peças de Fibra de Carbono para RC</a></li>
+                <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
+                <li><a href="./artigos/cambagem.html">🔧Como Corrigir o Alinhamento Negativo no WLtoys 144001 (Solução Simples e Eficaz).</a></li>
+                <li><a href="./artigos/algodao-supercola.html">🔧Repare trincas da sua bolha com um truque simples e barato!</a></li>
+                <li><a href="./artigos/cvd-vs-dogbone.html">⚙️CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
+                <li><a href="./artigos/cvd-vs-dogbone-comb.html">⚙️CVD vs Dogbone no RC: Análise Técnica Completa e Combinações Possíveis.</a></li>
+                <li><a href="./artigos/gyro.html">⚙️Gyro em Carros de RC: Vale a Pena Usar em Alta Velocidade?.</a></li>
+                <li><a href="./artigos/motoressensored.html">⚙️Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
+                <li><a href="./artigos/kv-vs-volt.html">⚡KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
+                <li><a href="./artigos/motor-engrenagem.html">⚙️Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
+                <li><a href="./artigos/kv-baixo-pinhao-grande.html">⚙️Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande.</a></li>
+                <li><a href="./artigos/esc-cartao.html">⚙️Cartão de Programação do ESC: O Segredo do Setup de Performance.</a></li>
+                <li><a href="./artigos/gear-mesh.html">⚙️Gear Mesh (Engrenamento): O Segredo para Engrenagens Indestrutíveis.</a></li>
+                <li><a href="./artigos/belt-gear.html">⚙️Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
+                <li><a href="./artigos/decifrandobaterias.html">⚡Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S para a Alta Velocidade RC</a></li>
+                <li><a href="./artigos/lipo.html">⚡Baterias LiPo: A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
+                <li><a href="./artigos/lipo-inchadas.html">⚠️⚡Baterias LiPo Inchadas: Identificação, Causas e O que Fazer (Segurança em 1º).</a></li>
+                <li><a href="./artigos/capacitores.html">⚡Vantagens e Desvantagens de Instalar Capacitores.</a></li>
+                <li><a href="./artigos/fiacao.html">⚡A Fiação da Velocidade: Como Conectores e Cabos 3S, 4S e 6S Transformam a Potência Bruta.</a></li>
+                <li><a href="./artigos/pneus-altas-velocidades.html">💨Pneus para Altas Velocidades: Como manter o carro no chão a 100km/h.</a></li>
+                <li><a href="./artigos/carbono.html">💎Fibra de Carbono: A Força Invisível por Trás da Performance.</a></li>
+                <li><a href="./artigos/carbono-comprar.html">🛒Onde Encontrar Peças de Fibra de Carbono para RC.</a></li>
+                <li><a href="./artigos/escala-rc.html">📏1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
+                <li><a href="./artigos/dragrace.html">🚀O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag e Outlaw.</a></li>
+                <li><a href="./artigos/dragrace-carro.html">🚀Como Montar um Carro RC Outlaw Competitivo: Componentes e Investimentos.</a></li>
+                <li><a href="./artigos/downforce.html">🌬️ Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
+                <li><a href="./artigos/dragrace-suspensao.html">🏎️ O Setup da Suspensão para o Drag RC: A Arte da Tração Perfeita.</a></li>
+                <li><a href="./artigos/dragrace-frank.html">🚀Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
+                <li><a href="./artigos/144001-super-veloz.html">🚀Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
+                <li><a href="./artigos/servo-bec.html">💡Servo Digital e BEC: Precisão e Potência para o Controle Absoluto.</a></li>
+                <li><a href="./artigos/angulos-amortecedores.html">📐Setup de Suspensão: Eliminando o "Olhômetro" para Estabilidade Máxima.</a></li>
+                <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: O Passo a Passo para Sua Primeira Corrida Oficial.</a></li>
+                <li><a href="./artigos/dia-antes-corrida.html">🔧Dia Antes da Competição:O Checklist Definitivo Pré-Pista.</a></li>
+                <li><a href="./artigos/dia-seguinte-competicao.html">🔧Dia Seguinte da Competição: Manutenção Essencial para Longa Vida do RC.</a></li>
+                <li><a href="./artigos/seguranca-160.html">🛑Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+</a></li>
+                <li><a href="./artigos/arrma-felony-detalhada.html">🏎️Arrma Felony - Rápido e Feroz: Descrição Detalhada – O Muscle Car da Pista.</a></li>
+                <li><a href="./artigos/arrma-limitless-detalhada.html">🏎️Arrma Limitless - O Caça-Recordes de Velocidade: Descrição Detalhada.</a></li>
                 <li style="background: #f0f0f0;"><a href="#">🏎️⚡🏁 AGUARDE + ARTIGOS EM BREVE ⚙️📏🔧</a></li>
             </ul>
         </section>
@@ -264,31 +324,32 @@
         <section class="info-section">
             <div class="info-box">
                 <h3>Glossário RC</h3>
-                <p>Entenda os termos técnicos e domine a linguagem da performance RC.</p>
+                <p>Decifre a linguagem técnica da alta performance. <strong>Essencial para novatos e veteranos!</strong></p>
                 <a href="./glossario.html">Ver Glossário Completo</a>
             </div>
             <div class="info-box">
                 <h3>Projetos RC</h3>
-                <p>Acompanhe a construção e os testes de nossos carros de alta performance.</p>
+                <p>Acompanhe a construção e os testes de nossos carros. <strong>Inspire seu próximo projeto!</strong></p>
                 <a href="./projetos.html">Explorar Projetos</a>
             </div>
             <div class="info-box">
                 <h3>Links Úteis</h3>
-                <p>Recursos, comunidades e ferramentas recomendadas para o mundo RC.</p>
+                <p>Nossos fornecedores, comunidades e ferramentas favoritas. Recursos que realmente fazem a diferença.</p>
                 <a href="./links.html">Acessar Links Selecionados</a>
             </div>
         </section>
 
         <section id="contato">
-            <h2>Entre em Contato com a Oficina</h2>
-            <p>Precisa de diagnóstico, conserto ou suporte técnico? Fale com a equipe KZK RC!</p>
+            <h2>:: ENTRE EM CONTATO COM A OFICINA ::</h2>
+            <p>Precisa de manutenção, consultoria para upgrades ou preparação para alta velocidade? Fale conosco!</p>
+            <p>E-mail direto (clique para enviar):</p>
             <a href="mailto:mpspraia@gmail.com">mpspraia@gmail.com</a>
-            <p style="margin-top: 15px; font-size: 0.9em;">Seu projeto de alta performance começa aqui na KZK RC-Oficina.</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">*Seu projeto de alto desempenho começa aqui na KZK RC-Oficina.</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 KZK RC-Oficina – Diagnósticos, conserto e aprimoramentos para carros de controle remoto. <strong>A evolução é constante. Supere seus limites.</strong></p>
+        <p>&copy; 2025 KZK RC-Oficina. Seu parceiro na alta performance de RCs. <strong>A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.</strong></p>
     </footer>
 
     <!-- Script splash -->
@@ -333,6 +394,9 @@
                 if (s.y > canvas.height) {
                     s.y = -s.h;
                     s.scale = 0.2 + Math.random()*0.8;
+                    s.w = 10 + Math.random()*15;
+                    s.h = 40 + Math.random()*20;
+                    s.speed = 2 + Math.random()*2;
                 }
             });
             requestAnimationFrame(animateStripes);
@@ -350,3 +414,4 @@
 
 </body>
 </html>
+
