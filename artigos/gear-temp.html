@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade RC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilo customizado para as tabelas de parâmetros */
+    .tabela-parametros {
+        @apply w-full text-sm text-left border-collapse mb-8;
+    }
+    .tabela-parametros th, .tabela-parametros td {
+        @apply py-3 px-4 border-b border-gray-200;
+    }
+    .tabela-parametros thead {
+        @apply bg-blue-100 text-blue-800 font-semibold;
+    }
+    .tabela-parametros tbody tr:hover {
+        @apply bg-gray-50;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">
+      Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade RC e Speed Runs
+    </h1>
+
+    <p class="mb-6">
+      O **Gearing** é a ponte entre o poder bruto do seu motor e a velocidade final que você atinge, e a **temperatura** é o termômetro da sustentabilidade dessa performance. Sem o *gearing* correto, você pode ter o motor mais potente do mundo e ainda ser lento ou, pior, <strong class="text-red-600">fritar seu sistema</strong>.
+    </p>
+
+    <p class="mb-8">
+      O acoplamento entre o Pinhão e a Spur (Coroa) — a sua **Relação de Transmissão** — é o ajuste mecânico mais importante que você fará. Ele determina como a rotação (RPM) é convertida em velocidade na roda.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">O que é Gearing e a Relação de Transmissão?</h2>
+    <p class="mb-4">
+      O Gearing é a relação entre o número de dentes do <strong class="text-blue-600">Pinhão</strong> (a engrenagem no eixo do motor) e o número de dentes da <strong class="text-blue-600">Spur</strong> (a engrenagem que aciona a transmissão).
+    </p>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong>Relação Mais Curta (Pinhão Pequeno / Spur Grande):</strong> O carro tem torque e acelera violentamente. O motor opera mais solto e, por consequência, <strong class="text-green-600">mais frio</strong>.</li>
+      <li><strong>Relação Mais Longa (Pinhão Grande / Spur Pequena):</strong> O carro busca a <strong class="text-red-600">velocidade final máxima</strong>, mas a aceleração é mais lenta. O motor é exigido ao extremo, gerando muito mais calor.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">O Desafio da Alta Velocidade (Speed Runs)</h2>
+    <p class="mb-4">
+      Para bater recordes, o objetivo é sempre usar o Gearing mais longo possível. A regra é:
+    </p>
+    
+    <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-6">
+      ⚠️ <strong>Fórmula Simples:</strong> Mais dentes no Pinhão = <strong class="font-bold">Mais velocidade final</strong> = <strong class="font-bold">Mais calor</strong>.
+    </div>
+    
+    <p class="mb-6">
+      O motor é exigido ao máximo para "puxar" a relação longa. O **superaquecimento** é a principal e inevitável consequência de um gearing muito longo para o seu motor e bateria, resultando em perda de KV e falha do sistema.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Gerenciamento de Temperatura: O Limite da Performance</h2>
+    <p class="mb-4">
+      O calor é o inimigo número um do sistema. Conhecer e respeitar os limites de temperatura é a chave para a longevidade dos seus componentes de alto valor.
+    </p>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">Por Que a Temperatura é Crítica?</h3>
+    <ul class="list-disc list-inside mb-6 space-y-2">
+      <li><strong>Motor:</strong> O calor danifica o isolamento do fio e pode <strong class="text-red-600">desmagnetizar os ímãs</strong> internos, reduzindo permanentemente o KV e a potência.</li>
+      <li><strong>ESC:</strong> Temperaturas excessivas levam ao acionamento da **Thermal Protection** (Proteção Térmica), cortando a energia e parando seu carro.</li>
+      <li><strong>Baterias Li-Po:</strong> Acima de 60°C, a vida útil é drasticamente reduzida.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-3 text-blue-500">Medindo e Gerenciando o Calor</h3>
+    <div class="overflow-x-auto shadow-md rounded-lg">
+        <table class="tabela-parametros">
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Temperatura Segura (Máxima)</th>
+                    <th>Ação de Gerenciamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Motor (Carcaça)</td>
+                    <td><strong class="text-red-600">Não passar de 90°C</strong></td>
+                    <td>Ventoinhas de alta RPM, cortes na carroceria para fluxo de ar, **redução do Gearing**.</td>
+                </tr>
+                <tr>
+                    <td>ESC</td>
+                    <td>90°C a 105°C (Verifique o manual)</td>
+                    <td>Ventoinha dedicada, dissipadores de calor extras.</td>
+                </tr>
+                <tr>
+                    <td>Baterias Li-Po</td>
+                    <td><strong class="text-red-600">Máximo 60°C</strong></td>
+                    <td>Garantir ventilação e que o C-Rating seja suficiente para a demanda.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">O Procedimento do Piloto de Performance</h2>
+    <p class="mb-4">
+      O ajuste de gearing para velocidade é um processo metódico, não um chute:
+    </p>
+    <ul class="list-decimal list-inside mb-6 space-y-2">
+      <li><strong>1. Comece Conservador:</strong> Use um gearing curto e seguro.</li>
+      <li><strong>2. Aumente o Pinhão:</strong> Avance em incrementos pequenos (1 a 2 dentes).</li>
+      <li><strong>3. Teste Curto:</strong> Faça um *run* rápido de 2 a 3 minutos.</li>
+      <li><strong>4. Meça Imediatamente:</strong> Use um **termômetro infravermelho** para medir a temperatura do motor e do ESC assim que o carro parar.</li>
+      <li><strong>5. Ajuste:</strong> Se o motor estiver abaixo do limite (ex: 70°C), aumente o Pinhão novamente. Se estiver perto do limite (90°C), você encontrou o Gearing Máximo Sustentável para o seu setup atual.</li>
+    </ul>
+
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
+      🚨 <strong>Regra de Ouro:</strong> **Nunca confie apenas no toque!** Um motor que "está quente demais para tocar" já ultrapassou os 60°C e pode estar perigosamente próximo de danificar os ímãs. Use sempre o termômetro.
+    </div>
+    
+    <h2 class="text-2xl font-semibold mt-8 mb-3 text-blue-600">Conclusão</h2>
+    <p class="mb-8">
+      Atingir a velocidade final máxima é uma questão de **cálculo e controle**, e não apenas de potência. Domine a relação Gearing e use o termômetro como seu guia. É a única forma de empurrar os limites do seu motor sem o risco de uma falha catastrófica.
+    </p>
+
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
