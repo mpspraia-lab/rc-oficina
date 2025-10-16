@@ -1,428 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KZK RC-Oficina | Manutenção, Diagnóstico e Performance em Carros RC</title>
-
-    <!-- SEO -->
-    <meta name="description" content="KZK RC-Oficina – Diagnósticos, conserto, ajustes e aprimoramentos de desempenho em carros de controle remoto de alta performance. Artigos técnicos, glossário e projetos." />
-    <meta name="keywords" content="carros RC, manutenção RC, diagnóstico eletrônico RC, conserto RC, performance RC, speed run RC, fibra de carbono RC, Arrma Limitless, KZK 160, LiPo, ESC, motor sensored, drag race RC" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="KZK RC-Oficina | Performance e Diagnóstico em Carros RC" />
-    <meta property="og:description" content="Diagnósticos, Consertos e Soluções para Projetos de Carros RC de Alta Performance. Artigos, glossário e projetos." />
-    <meta property="og:image" content="https://mpspraia-lab.github.io/rc-oficina/imagens/rc-banner.jpg" />
-    <meta property="og:url" content="https://mpspraia-lab.github.io/rc-oficina/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Schema JSON-LD (structured data) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "KZK RC-Oficina",
-      "url": "https://mpspraia-lab.github.io/rc-oficina/",
-      "logo": "https://mpspraia-lab.github.io/rc-oficina/imagens/logo.png",
-      "description": "Diagnósticos, Consertos, Ajustes e Aprimoramentos no Desempenho em Carros de Controle Remoto de Alta Performance.",
-      "email": "mailto:mpspraia@gmail.com",
-      "founder": {
-        "@type": "Person",
-        "name": "Marcos K. Peixoto"
-      },
-      "sameAs": [
-        "https://github.com/mpspraia-lab"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "mpspraia@gmail.com",
-        "availableLanguage": "pt-BR"
-      }]
-    }
-    </script>
-
+    <meta name="description" content="Manutenção e Preparação de Carros RC para Velocidade Extrema e Alto Desempenho. Seu parceiro na alta performance de RCs.">
     <style>
-        :root {
-            --cor-principal: #FF4500;
-            --cor-secundaria: #333;
-            --cor-fundo: #f4f4f4;
-            --cor-texto: #1a1a1a;
-            --fonte-titulo: 'Arial Black', sans-serif;
-            --fonte-corpo: 'Helvetica Neue', sans-serif;
-        }
-
         body {
-            font-family: var(--fonte-corpo);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
         }
-
-        header {
-            background-color: var(--cor-secundaria);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 5px solid var(--cor-principal);
-        }
-
-        header h1 {
-            font-family: var(--fonte-titulo);
-            margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-style: italic;
-            font-size: 1.1em;
-            margin-top: 5px;
-        }
-
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 95%;
+            max-width: 1100px; /* Aumentado para acomodar 3 colunas confortavelmente */
             margin: 20px auto;
-            padding: 20px;
-            background: white;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-
-        .cta {
-            background-color: var(--cor-principal);
-            color: white;
-            padding: 30px;
+        header {
             text-align: center;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
+            padding-bottom: 20px;
+            border-bottom: 3px double #ddd;
         }
-
-        .cta h2 {
-            margin-top: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            color: #FFD700;
-            position: relative;
-            z-index: 2;
+        header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 5px;
         }
-
-        .cta p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .cta a {
-            display: inline-block;
-            background-color: white;
-            color: var(--cor-principal);
-            text-decoration: none;
-            padding: 10px 25px;
-            border-radius: 5px;
+        header p {
+            color: #d9534f;
+            font-style: italic;
             font-weight: bold;
-            text-transform: uppercase;
-            transition: background-color 0.3s, color 0.3s;
-            z-index: 2;
-            position: relative;
         }
-
-        .cta a:hover {
-            background-color: var(--cor-secundaria);
-            color: white;
-        }
-
         h2 {
-            color: var(--cor-principal);
-            border-bottom: 2px solid var(--cor-principal);
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-
-        #artigos h2 {
+            color: #5cb85c;
             text-align: center;
-            font-size: 1.8em;
-            word-wrap: break-word;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
         }
-
-        .article-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        h3 {
+            color: #d9534f;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
-
-        .article-list li {
-            background: #fff;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .article-list li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .article-list a {
-            color: var(--cor-secundaria);
-            text-decoration: none;
-            font-weight: bold;
+        .call-to-action {
             display: block;
+            text-align: center;
+            margin: 20px auto 40px;
+            padding: 15px 30px;
+            background-color: #5bc0de;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
             font-size: 1.1em;
+            transition: background-color 0.3s;
         }
-
-        .article-list a:hover {
-            color: var(--cor-principal);
+        .call-to-action:hover {
+            background-color: #31b0d5;
         }
-
-        .info-section {
+        
+        /* Estilos da nova estrutura de artigos */
+        #artigos {
+            padding-top: 20px;
+        }
+        .categorias-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: 30px;
+            justify-content: center;
         }
-
-        .info-box {
-            flex: 1;
-            min-width: 300px;
-            background-color: #eee;
+        .categoria-box {
+            flex: 1 1 300px; /* Permite 3 colunas em telas grandes */
+            background: #f9f9f9;
             padding: 20px;
-            border-left: 5px solid var(--cor-principal);
-            border-radius: 5px;
-        }
-
-        .info-box h3 {
-            color: var(--cor-principal);
-            margin-top: 0;
-        }
-
-        #contato {
-            margin-top: 40px;
-            padding: 25px;
-            background-color: #fff;
-            border: 1px dashed #ddd;
-            text-align: center;
+            border: 1px solid #ddd;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
         }
-
-        #contato p {
-            font-size: 1.1em;
+        .categoria-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
-
-        #contato a {
-            color: var(--cor-principal);
-            font-weight: bold;
+        .categoria-box ul {
+            list-style-type: '⚡ '; /* Ícone padrão (pode ser ajustado) */
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        .categoria-box li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .categoria-box a {
+            color: #333;
             text-decoration: none;
-            font-size: 1.3em;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
-
-        #contato a:hover {
-            color: var(--cor-secundaria);
+        .categoria-box a:hover {
+            color: #d9534f;
             text-decoration: underline;
         }
 
+        /* Estilos para a seção de Links/Glossário */
+        .secoes-adicionais {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .secoes-adicionais div {
+            flex: 1 1 250px;
+            padding: 15px;
+        }
+        .secoes-adicionais a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #d9534f;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        /* Rodapé atualizado */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: var(--cor-secundaria);
-            color: white;
+            border-top: 1px solid #eee;
             margin-top: 40px;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            color: #777;
         }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8em; }
-            .cta h2 { font-size: 1.5em; line-height: 1.3; }
-            #artigos h2 { font-size: 1.5em; line-height: 1.3; }
-            .article-list { grid-template-columns: 1fr; }
+        .footer-text {
+            display: block;
+            margin-top: 5px;
         }
-
-        /* ====== SPLASH ESTILO ESTRADA ====== */
-        #splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #111; display: flex; align-items: center; justify-content: center; z-index: 9999; overflow: hidden; }
-        #splash-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .side-stripe-left, .side-stripe-right { position: absolute; top: 0; width: 10%; height: 100%; background: #666; z-index: 1; }
-        .side-stripe-left { left: 0; }
-        .side-stripe-right { right: 0; }
-        #logo { position: relative; color: gold; font-size: 3em; font-weight: bold; font-family: 'Arial', sans-serif; z-index: 2; text-align: center; animation: logoFly 3s forwards; }
-        @keyframes logoFly { 0% { opacity: 0; transform: translateY(20px) scale(0.8);} 50% { opacity: 1; transform: translateY(0) scale(1.1);} 100% { opacity: 0; transform: translateY(-20px) scale(1);} }
     </style>
 </head>
 <body>
 
-    <!-- Splash de abertura -->
-    <div id="splash">
-        <canvas id="splash-canvas"></canvas>
-        <div class="side-stripe-left"></div>
-        <div class="side-stripe-right"></div>
-        <div id="logo">KZK RC-OFICINA</div>
-    </div>
+<div class="container">
 
     <header>
         <h1>KZK RC-OFICINA</h1>
         <p>Manutenção e Preparação de Carros RC para Velocidade Extrema e Alto Desempenho.</p>
+        
+        <h2>>> AQUI CRIAMOS RECORDES <<</h2>
+        <p>Na KZK RC-Oficina, seu limite é a nossa pista de testes. Superar limites é nossa especialidade.</p>
+        <p>Diagnósticos, Consertos, Ajustes, Aprimoramentos de Desempenho e Soluções para Projetos de Carros de RC de Alta Performance.</p>
+        
+        <a href="#artigos" class="call-to-action">COMECE A SUPERAÇÃO AGORA!</a>
     </header>
 
-    <div class="container">
-        <div class="cta">
-            <h2 class="text-center" style="color: #FFD700;">>> AQUI CRIAMOS RECORDES <<</h2>
-            <p>Na KZK RC-Oficina, seu limite é a nossa pista de testes. Superar limites é nossa especialidade.</p>
-            <p>Diagnósticos, Consertos, Ajustes, Aprimoramentos de Desempenho e Soluções para Projetos de Carros de RC de Alta Rerformance.</p>
-            <a href="#artigos">COMECE A SUPERAÇÃO AGORA!</a>
+    <section id="artigos">
+        <h2 style="color: #d9534f; border-bottom: 2px solid #ddd; padding-bottom: 15px;">..: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS :..</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Acelere seu aprendizado com nossa biblioteca de conhecimento, organizada por tópicos.</p>
+
+        <div class="categorias-grid">
+
+            <div class="categoria-box">
+                <h3>⚡ Eletrônica & Potência</h3>
+                <ul style="list-style-type: '⚡ ';">
+                    <li><a href="./artigos/kv-vs-volt.html">KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
+                    <li><a href="./artigos/motoressensored.html">Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
+                    <li><a href="./artigos/brushed.html">O Enigma do "T" nos Motores Brushed de RC.</a></li>
+                    <li><a href="./artigos/turbo.html">Timing e Punch: O Turbo Gratuito para a Velocidade.</a></li>
+                    <li><a href="./artigos/esc-cartao.html">Cartão de Programação do ESC: O Segredo do Setup.</a></li>
+                    <li><a href="./artigos/esc_cartao_prog.html">Programação de ESCs: Do Básico ao Extremo.</a></li>
+                    <li><a href="./artigos/decifrandobaterias.html">Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S.</a></li>
+                    <li><a href="./artigos/lipo.html">Baterias LiPo: A Química da Velocidade e Carga Máxima.</a></li>
+                    <li><a href="./artigos/lipo-inchadas.html">⚠️Baterias LiPo Inchadas: Identificação, Causas e O que Fazer.</a></li>
+                    <li><a href="./artigos/capacitores.html">Vantagens e Desvantagens de Instalar Capacitores.</a></li>
+                    <li><a href="./artigos/fiacao.html">A Fiação da Velocidade: Conectores e Cabos 3S, 4S e 6S.</a></li>
+                    <li><a href="./artigos/servo-bec.html">Servo Digital e BEC: Precisão e Potência.</a></li>
+                </ul>
+            </div>
+            
+            <div class="categoria-box">
+                <h3>⚙️ Mecânica & Transmissão</h3>
+                <ul style="list-style-type: '⚙️ ';">
+                    <li><a href="./artigos/cvd-vs-dogbone.html">CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
+                    <li><a href="./artigos/cvd-vs-dogbone-comb.html">CVD vs Dogbone: Análise Técnica e Combinações.</a></li>
+                    <li><a href="./artigos/gear-mesh.html">Gear Mesh: O Segredo para Engrenagens Indestrutíveis.</a></li>
+                    <li><a href="./artigos/belt-gear.html">Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
+                    <li><a href="./artigos/spool.html">Spool (Eixo Rígido): Instalando o Diferencial Travado.</a></li>
+                    <li><a href="./artigos/angulos-amortecedores.html">Setup de Suspensão: Eliminando o "Olhômetro".</a></li>
+                    <li><a href="./artigos/dragrace-suspensao.html">O Setup da Suspensão para o Drag RC.</a></li>
+                    <li><a href="./artigos/motor-engrenagem.html">Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
+                    <li><a href="./artigos/kv-baixo-pinhao-grande.html">Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande.</a></li>
+                    <li><a href="./artigos/gear-temp.html">Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade.</a></li>
+                </ul>
+            </div>
+            
+            <div class="categoria-box">
+                <h3>💨 Velocidade & Aerodinâmica</h3>
+                <ul style="list-style-type: '💨 ';">
+                    <li><a href="./artigos/pneus-altas-velocidades.html">Pneus para Altas Velocidades: Como manter o carro no chão.</a></li>
+                    <li><a href="./artigos/downforce.html">Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
+                    <li><a href="./artigos/dragrace.html">O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag.</a></li>
+                    <li><a href="./artigos/dragrace-carro.html">Como Montar um Carro RC Outlaw Competitivo.</a></li>
+                    <li><a href="./artigos/dragrace-frank.html">Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
+                    <li><a href="./artigos/artigo-felony-outlaw-ex07.html">👑Felony vs. Outlaw vs. EX07: Quem é o Rei dos Super Carros 1/7?</a></li>
+                    <li><a href="./artigos/arrma-felony-detalhada.html">Arrma Felony - Rápido e Feroz: Descrição Detalhada.</a></li>
+                    <li><a href="./artigos/arrma-limitless-detalhada.html">Arrma Limitless - O Caça-Recordes de Velocidade.</a></li>
+                </ul>
+            </div>
+            
+            <div class="categoria-box">
+                <h3>🔧 Manutenção & Dicas Rápidas</h3>
+                <ul style="list-style-type: '🔧 ';">
+                    <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
+                    <li><a href="./artigos/algodao-supercola.html">Repare trincas da sua bolha com um truque simples e barato!</a></li>
+                    <li><a href="./artigos/cambagem.html">Como Corrigir o Alinhamento Negativo no WLtoys 144001.</a></li>
+                    <li><a href="./artigos/144001_longo.html">Inverter os Braços Traseiros do WLtoys 144001 para Estabilidade Máxima.</a></li>
+                    <li><a href="./artigos/144001-super-veloz.html">Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
+                    <li><a href="./artigos/pos-speed.html">Manutenção Preventiva Pós-Speed Run ou Drag.</a></li>
+                    <li><a href="./artigos/dia-antes-corrida.html">Dia Antes da Competição: O Checklist Definitivo Pré-Pista.</a></li>
+                    <li><a href="./artigos/dia-seguinte-competicao.html">Dia Seguinte da Competição: Manutenção Essencial.</a></li>
+                </ul>
+            </div>
+            
+            <div class="categoria-box" style="flex: 1 1 630px; /* Ocupa duas colunas para essas categorias menores */">
+                
+                <h3 style="display: inline-block; width: 48%;">💎 Materiais & Upgrades</h3>
+                <h3 style="display: inline-block; width: 48%; margin-left: 2%;">📡 Controle & Rádio</h3>
+                
+                <div style="display: flex;">
+                    <ul style="list-style-type: '💎 '; width: 50%;">
+                        <li><a href="./artigos/carbono-titanio.html">Fibra de Carbono vs. Titânio: A Escolha do Recorde.</a></li>
+                        <li><a href="./artigos/carbono.html">Fibra de Carbono: A Força Invisível por Trás da Performance.</a></li>
+                        <li><a href="./artigos/carbono-comprar.html">Onde Encontrar Peças de Fibra de Carbono para RC.</a></li>
+                        <li><a href="./artigos/escala-rc.html">1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto?</a></li>
+                    </ul>
+                    
+                    <ul style="list-style-type: '📡 '; width: 50%;">
+                        <li><a href="./artigos/gyro.html">Giroscópio (Gyro) em Carros de RC: Vale a Pena Usar?</a></li>
+                        <li><a href="./artigos/binding1.html">Além do Gatilho: Entendendo Transmissores e Receptores.</a></li>
+                        <li><a href="./artigos/dumborc.html">DUMBORC: O Rei do Custo-Benefício no RC.</a></li>
+                        <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: Sua Primeira Corrida Oficial.</a></li>
+                        <li><a href="./artigos/seguranca-160.html">🛑Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+.</a></li>
+                    </ul>
+                </div>
+            </div>
+            
         </div>
 
-        <section id="artigos">
-            <h2 class="text-center">..: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS :..</h2>
-            <p>Acelere seu aprendizado com nossa biblioteca de conhecimento acumulado em mais de duas décadas de prática.</p>
-            <ul class="article-list">
-                <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
-                <li><a href="./artigos/cambagem.html">🔧Como Corrigir o Alinhamento Negativo no WLtoys 144001 (Solução Simples e Eficaz).</a></li>
-                <li><a href="./artigos/144001_longo.html">🔧O Segredo dos 100 km/h: Inverter os Braços Traseiros do WLtoys 144001 para Estabilidade Máxima</a></li>
-                <li><a href="./artigos/algodao-supercola.html">🔧Repare trincas da sua bolha com um truque simples e barato!</a></li>
-                <li><a href="./artigos/cvd-vs-dogbone.html">⚙️CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
-                <li><a href="./artigos/cvd-vs-dogbone-comb.html">⚙️CVD vs Dogbone no RC: Análise Técnica Completa e Combinações Possíveis.</a></li>
-                <li><a href="./artigos/gyro.html">⚙️Giroscópio (Gyro) em Carros de RC: Vale a Pena Usar em Alta Velocidade?.</a></li>
-                <li><a href="./artigos/brushed.html">⚙️O Enigma do "T" nos Motores Brushed de RC - Guia completo.</a></li>
-                <li><a href="./artigos/motoressensored.html">⚙️Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
-                <li><a href="./artigos/binding1.html">📡📶Além do Gatilho: Entendendo Transmissores, Receptores e o Binding no RC.</a></li>
-                <li><a href="./artigos/dumborc.html">📡📶DUMBORC: O Rei do Custo-Benefício no RC – Por Que Todo Entusiasta Está Usando.</a></li>
-                <li><a href="./artigos/kv-vs-volt.html">⚡KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
-                <li><a href="./artigos/motor-engrenagem.html">⚙️Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
-                <li><a href="./artigos/kv-baixo-pinhao-grande.html">⚙️Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande.</a></li>
-                <li><a href="./artigos/turbo.html">⚙️Timing e Punch: O Turbo Gratuito para a Velocidade de Competição.</a></li>
-                <li><a href="./artigos/esc-cartao.html">⚙️Cartão de Programação do ESC: O Segredo do Setup de Performance.</a></li>
-                <li><a href="./artigos/esc_cartao_prog.html">⚙️Programação de ESCs: Do Básico ao Extremo</a></li>
-                <li><a href="./artigos/gear-mesh.html">⚙️Gear Mesh (Engrenamento): O Segredo para Engrenagens Indestrutíveis.</a></li>
-                <li><a href="./artigos/gear-temp.html">⚙️Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade.</a></li>
-                <li><a href="./artigos/belt-gear.html">⚙️Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
-                <li><a href="./artigos/decifrandobaterias.html">⚡Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S para a Alta Velocidade RC</a></li>
-                <li><a href="./artigos/lipo.html">⚡Baterias LiPo: A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
-                <li><a href="./artigos/lipo-inchadas.html">⚠️⚡Baterias LiPo Inchadas: Identificação, Causas e O que Fazer (Segurança em 1º).</a></li>
-                <li><a href="./artigos/capacitores.html">⚡Vantagens e Desvantagens de Instalar Capacitores.</a></li>
-                <li><a href="./artigos/fiacao.html">⚡A Fiação da Velocidade: Como Conectores e Cabos 3S, 4S e 6S Transformam a Potência Bruta.</a></li>
-                <li><a href="./artigos/pneus-altas-velocidades.html">💨Pneus para Altas Velocidades: Como manter o carro no chão a 100km/h.</a></li>
-                <li><a href="./artigos/carbono-titanio.html">🚀Fibra de Carbono vs. Titânio: A Escolha do Recorde Certo para o Seu RC 6S+.</a></li>
-                <li><a href="./artigos/carbono.html">💎Fibra de Carbono: A Força Invisível por Trás da Performance.</a></li>
-                <li><a href="./artigos/carbono-comprar.html">🛒Onde Encontrar Peças de Fibra de Carbono para RC.</a></li>
-                <li><a href="./artigos/escala-rc.html">📏1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
-                <li><a href="./artigos/dragrace.html">🚀O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag e Outlaw.</a></li>
-                <li><a href="./artigos/dragrace-carro.html">🚀Como Montar um Carro RC Outlaw Competitivo: Componentes e Investimentos.</a></li>
-                <li><a href="./artigos/downforce.html">🌬️ Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
-                <li><a href="./artigos/dragrace-suspensao.html">🏎️O Setup da Suspensão para o Drag RC: A Arte da Tração Perfeita.</a></li>
-                <li><a href="./artigos/spool.html">🏎️Spool (Eixo Rígido): Instalando o Diferencial Travado.</a></li>
-                <li><a href="./artigos/pos-speed.html">🏎️Manutenção Preventiva Pós-Speed Run ou Drag: Inspeção Crítica de Spool e CVDs.</a></li>
-                <li><a href="./artigos/dragrace-frank.html">🚀Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
-                <li><a href="./artigos/144001-super-veloz.html">🚀Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
-                <li><a href="./artigos/servo-bec.html">💡Servo Digital e BEC: Precisão e Potência para o Controle Absoluto.</a></li>
-                <li><a href="./artigos/angulos-amortecedores.html">📐Setup de Suspensão: Eliminando o "Olhômetro" para Estabilidade Máxima.</a></li>
-                <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: O Passo a Passo para Sua Primeira Corrida Oficial.</a></li>
-                <li><a href="./artigos/dia-antes-corrida.html">🔧Dia Antes da Competição:O Checklist Definitivo Pré-Pista.</a></li>
-                <li><a href="./artigos/dia-seguinte-competicao.html">🔧Dia Seguinte da Competição: Manutenção Essencial para Longa Vida do RC.</a></li>
-                <li><a href="./artigos/seguranca-160.html">🛑Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+</a></li>
-                <li><a href="./artigos/arrma-felony-detalhada.html">🏎️Arrma Felony - Rápido e Feroz: Descrição Detalhada – O Muscle Car da Pista.</a></li>
-                <li><a href="./artigos/arrma-limitless-detalhada.html">🏎️Arrma Limitless - O Caça-Recordes de Velocidade: Descrição Detalhada.</a></li>
-                <li><a href="./artigos/artigo-felony-outlaw-ex07.html">👑⚔️O Teto de Velocidade Estourou! Felony vs. Outlaw vs. EX07: Quem é o Rei Ilegítimo dos Super Carros 1/7?</a></li>
-                <li style="background: #f0f0f0;"><a href="#">🏎️⚡🏁 AGUARDE + ARTIGOS EM BREVE ⚙️📏🔧</a></li>
-            </ul>
-        </section>
-
-        <section class="info-section">
-            <div class="info-box">
-                <h3>Glossário RC</h3>
-                <p>Decifre a linguagem técnica da alta performance. <strong>Essencial para novatos e veteranos!</strong></p>
-                <a href="./glossario.html">Ver Glossário Completo</a>
-            </div>
-            <div class="info-box">
-                <h3>Projetos RC</h3>
-                <p>Acompanhe a construção e os testes de nossos carros. <strong>Inspire seu próximo projeto!</strong></p>
-                <a href="./projetos.html">Explorar Projetos</a>
-            </div>
-            <div class="info-box">
-                <h3>Links Úteis</h3>
-                <p>Nossos fornecedores, comunidades e ferramentas favoritas. Recursos que realmente fazem a diferença.</p>
-                <a href="./links.html">Acessar Links Selecionados</a>
-            </div>
-        </section>
-
-        <section id="contato">
-            <h2>:: ENTRE EM CONTATO COM A OFICINA ::</h2>
-            <p>Precisa de manutenção, consultoria para upgrades ou preparação para alta velocidade? Fale conosco!</p>
-            <p>E-mail direto (clique para enviar):</p>
-            <a href="mailto:mpspraia@gmail.com">mpspraia@gmail.com</a>
-            <p style="margin-top: 15px; font-size: 0.9em;">*Seu projeto de alto desempenho começa aqui na KZK RC-Oficina.</p>
-        </section>
+        <p style="text-align: center; margin-top: 30px; font-weight: bold; color: #d9534f; font-size: 1.1em;">
+            <a href="#" style="color: #d9534f; text-decoration: none;">🏎️⚡🏁 AGUARDE + ARTIGOS EM BREVE ⚙️📏🔧</a>
+        </p>
+    </section>
+    <div class="secoes-adicionais">
+        <div>
+            <h3>Glossário RC</h3>
+            <p>Decifre a linguagem técnica da alta performance. **Essencial para novatos e veteranos!**</p>
+            <a href="./glossario.html">Ver Glossário Completo</a>
+        </div>
+        <div>
+            <h3>Projetos RC</h3>
+            <p>Acompanhe a construção e os testes de nossos carros. **Inspire seu próximo projeto!**</p>
+            <a href="./projetos.html">Explorar Projetos</a>
+        </div>
+        <div>
+            <h3>Links Úteis</h3>
+            <p>Nossos fornecedores, comunidades e ferramentas favoritas. Recursos que fazem a diferença.</p>
+            <a href="./links.html">Acessar Links Selecionados</a>
+        </div>
     </div>
 
+    <h2 style="color: #5bc0de; border-bottom: 2px solid #ddd; padding-bottom: 15px;">:: ENTRE EM CONTATO COM A OFICINA ::</h2>
+    <p style="text-align: center;">Precisa de manutenção, consultoria para upgrades ou preparação para alta velocidade? Fale conosco!</p>
+    <p style="text-align: center; font-weight: bold; font-size: 1.1em;">E-mail direto (clique para enviar):</p>
+    <a href="mailto:mpspraia@gmail.com" class="call-to-action" style="background-color: #f0ad4e;">mpspraia@gmail.com</a>
+    <p style="text-align: center; font-style: italic; font-size: 0.9em;">*Seu projeto de alto desempenho começa aqui na KZK RC-Oficina.</p>
+
     <footer>
-        <p>&copy; 2025 KZK RC-Oficina. Seu parceiro na alta performance de RCs. <strong>A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.</strong></p>
+        <span class="footer-text">© 2025 KZK RC-Oficina. Seu parceiro na alta performance de RCs.</span>
+        <span class="footer-text">A Evolução é Constante. Supere Seus Limites. Conquiste Novos Recordes.</span>
+        <a href="#" style="color: #777; text-decoration: none; display: block; margin-top: 5px;">[Voltar ao Início]</a>
     </footer>
 
-    <!-- Script splash -->
-    <script>
-        const splash = document.getElementById('splash');
-        const canvas = document.getElementById('splash-canvas');
-        const ctx = canvas.getContext('2d');
-        let stripes = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        function createStripes() {
-            stripes = [];
-            const count = 50;
-            for (let i = 0; i < count; i++) {
-                stripes.push({
-                    x: canvas.width/2,
-                    y: Math.random()*canvas.height,
-                    w: 10 + Math.random()*15,
-                    h: 40 + Math.random()*20,
-                    speed: 2 + Math.random()*2,
-                    scale: 0.2 + Math.random()*0.8
-                });
-            }
-        }
-
-        function animateStripes() {
-            ctx.fillStyle = '#111';
-            ctx.fillRect(0,0,canvas.width,canvas.height);
-            stripes.forEach(s => {
-                const perspective = s.scale + s.y / canvas.height;
-                const width = s.w * perspective * 2;
-                const height = s.h * perspective;
-                ctx.fillStyle = 'white';
-                ctx.fillRect(s.x - width/2, s.y, width, height);
-                s.y += s.speed;
-                if (s.y > canvas.height) {
-                    s.y = -s.h;
-                    s.scale = 0.2 + Math.random()*0.8;
-                    s.w = 10 + Math.random()*15;
-                    s.h = 40 + Math.random()*20;
-                    s.speed = 2 + Math.random()*2;
-                }
-            });
-            requestAnimationFrame(animateStripes);
-        }
-
-        createStripes();
-        animateStripes();
-
-        setTimeout(() => {
-            splash.style.transition = 'opacity 0.6s';
-            splash.style.opacity = 0;
-            setTimeout(()=> splash.remove(), 600);
-        }, 3000);
-    </script>
+</div>
 
 </body>
 </html>
-
