@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links Úteis - RC Oficina</title>
     <style>
-        /* ESTILOS GERAIS */
+        /* Estilos básicos para garantir a legibilidade */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f4f4f4;
         }
         header, footer {
             background: #333;
@@ -19,94 +18,48 @@
             padding: 1em;
             text-align: center;
         }
-        header nav a {
+        nav a {
             color: #fff;
             margin: 0 10px;
             text-decoration: none;
         }
         main {
-            display: flex; /* Habilita o layout flexível */
             padding: 20px;
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
-        .content-area {
-            flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
-            padding-left: 30px;
+        h1, h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
-        
-        /* ESTILOS DO MENU LATERAL (Baseado na imagem) */
-        .sidebar-menu {
-            width: 300px; /* Largura do menu */
-            background-color: #0b1a2b; /* Fundo escuro/azul-marinho */
-            color: #fff;
-            padding: 10px 0;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            border-radius: 5px;
+        ul {
+            list-style: none;
+            padding: 0;
         }
-
-        .menu-title {
-            color: #008cba; /* Cor de destaque (Azul Claro) */
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border-bottom: 1px solid #1a2c40;
-            margin-bottom: 5px;
+        li {
+            margin-bottom: 20px;
+            border-left: 3px solid #007bff;
+            padding-left: 15px;
+        }
+        li a {
             font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .menu-item {
-            display: block;
-            padding: 10px 20px;
-            border-bottom: 1px solid #1a2c40; /* Linha divisória */
-            transition: background-color 0.2s;
-            position: relative;
-        }
-
-        .menu-item a {
-            color: #fff;
+            font-size: 1.1em;
             text-decoration: none;
-            font-size: 1em;
-            display: block;
-            padding-left: 20px; /* Espaço para o "ponto" */
+            color: #007bff;
         }
-        
-        /* O CÍRCULO AMARELO/OURO (simulando a bolinha da imagem) */
-        .menu-item::before {
-            content: "•"; /* Usa um caractere de lista */
-            color: #f4d03f; /* Cor amarela/ouro */
-            position: absolute;
-            left: 10px;
-            font-size: 1.2em;
+        li a:hover {
+            text-decoration: underline;
         }
-
-        .menu-item:hover {
-            background-color: #1a2c40; /* Efeito de hover */
+        li p {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #555;
         }
-
-        .menu-item:hover a {
-            color: #ff9900; /* Cor de destaque no hover (Laranja) */
-        }
-        
-        /* Estilo da descrição */
-        .link-description {
-            font-size: 0.8em;
-            color: #ccc;
-            padding: 5px 20px 0 20px;
-            display: none; /* Oculta as descrições na sidebar por padrão */
-        }
-        
-        /* Opcional: Mostrar descrição no hover */
-        /* .menu-item:hover .link-description {
-            display: block;
-        } */
-        
         .return-link {
             text-align: center;
             margin-top: 40px;
             font-size: 1.1em;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
         }
     </style>
 </head>
@@ -119,90 +72,99 @@
     </header>
 
     <main>
-        <nav class="sidebar-menu">
-            <div class="menu-title">Fabricantes de RC</div>
-            
-            <div class="menu-list">
-                <div class="menu-item">
-                    <a href="http://www.traxxas.com" target="_blank">Traxxas</a>
-                    </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.arrma-rc.com" target="_blank">Arrma (Horizon Hobby)</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.teamassociated.com" target="_blank">Team Associated</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.losi.com" target="_blank">Losi (Horizon Hobby)</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.kyosho.com" target="_blank">Kyosho</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="https://www.hpiracing.com/" target="_blank">HPI Racing</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.axialracing.com" target="_blank">Axial Racing (Horizon Hobby)</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.redcatracing.com" target="_blank">Redcat Racing</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.tamiya.com" target="_blank">Tamiya</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="https://www.teamyokomo.com/" target="_blank">Yokomo</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.teamxray.com" target="_blank">XRAY</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.serpent.com" target="_blank">Serpent</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.mugenseiki.com/" target="_blank">Mugen Seiki</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://hobao-racing.com/en/" target="_blank">Hobao Racing</a>
-                </div>
-                
-                <div class="menu-item">
-                    <a href="http://www.teknorc.com" target="_blank">Tekno RC</a>
-                </div>
-            </div>
-        </nav>
+        <h1>Principais Fabricantes de Carros de Controle Remoto (RC)</h1>
+
+        <p>
+            Esta é uma lista abrangente dos principais fabricantes de carros de controle remoto. 
+            O mercado de RC é vasto e está sempre evoluindo, mas esta lista cobre os nomes mais 
+            proeminentes e amplamente reconhecidos, abrangendo diversas categorias (on-road, 
+            off-road, elétricos, nitro, etc.).
+        </p>
+
+        <h2>Fabricantes de Carros RC (Kits e RTR)</h2>
         
-        <div class="content-area">
-            <h1>Fabricantes de Carros de Controle Remoto (RC)</h1>
-
-            <p>
-                Esta é uma lista abrangente dos principais fabricantes de carros de controle remoto. 
-                O mercado de RC é vasto e está sempre evoluindo, mas esta lista cobre os nomes mais 
-                proeminentes e amplamente reconhecidos, abrangendo diversas categorias (on-road, 
-                off-road, elétricos, nitro, etc.).
-            </p>
+        <ul>
+            <li>
+                <a href="http://www.traxxas.com" target="_blank">Traxxas</a>
+                <p><strong>Foco:</strong> Conhecida por sua durabilidade, velocidade e veículos "ready-to-run" (RTR) de alta performance. Popular em trucks, buggies e carros de corrida.</p>
+            </li>
             
-            <p>Clique em um fabricante no menu lateral para acessar o site oficial.</p>
-
-            <hr>
+            <li>
+                <a href="http://www.arrma-rc.com" target="_blank">Arrma (Horizon Hobby)</a>
+                <p><strong>Foco:</strong> Especializada em veículos off-road duráveis e de alta velocidade para *bashing* (condução extrema e saltos). Parte da Horizon Hobby.</p>
+            </li>
             
-            <p class="return-link">
-                <a href="index.html">← Voltar para a Página Principal</a>
-            </p>
-        </div>
+            <li>
+                <a href="http://www.teamassociated.com" target="_blank">Team Associated</a>
+                <p><strong>Foco:</strong> Uma das marcas mais antigas e respeitadas no automobilismo RC, com forte presença em kits de corrida profissionais (buggies, trucks, short course).</p>
+            </li>
+            
+            <li>
+                <a href="http://www.losi.com" target="_blank">Losi (Horizon Hobby)</a>
+                <p><strong>Foco:</strong> Marca icônica, conhecida por modelos de corrida de alta qualidade e veículos de escala realista. Parte da Horizon Hobby.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.kyosho.com" target="_blank">Kyosho</a>
+                <p><strong>Foco:</strong> Fabricante japonês com longa história em RC, produzindo desde carros de corrida de alta performance até modelos RTR e veículos de escala.</p>
+            </li>
+            
+            <li>
+                <a href="https://www.hpiracing.com/" target="_blank">HPI Racing</a>
+                <p><strong>Foco:</strong> Popular por seus modelos de drifting, on-road e off-road, incluindo veículos a gasolina (baja) e elétricos.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.axialracing.com" target="_blank">Axial Racing (Horizon Hobby)</a>
+                <p><strong>Foco:</strong> Líder em *rock crawlers* e *trail trucks* (escaladores de rochas e caminhões de trilha), conhecidos por sua capacidade off-road extrema e realismo. Parte da Horizon Hobby.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.redcatracing.com" target="_blank">Redcat Racing</a>
+                <p><strong>Foco:</strong> Oferece ampla gama de veículos RC a preços acessíveis, bom para iniciantes e orçamentos menores.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.tamiya.com" target="_blank">Tamiya</a>
+                <p><strong>Foco:</strong> Fabricante japonês lendário, conhecido por seus kits de montagem detalhados de carros, caminhões e tanques. Forte em modelos de escala e clássicos.</p>
+            </li>
+            
+            <li>
+                <a href="https://www.teamyokomo.com/" target="_blank">Yokomo</a>
+                <p><strong>Foco:</strong> Altamente respeitada no mundo do *drifting* RC e corrida *on-road*, com kits de chassi de alta performance.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.teamxray.com" target="_blank">XRAY</a>
+                <p><strong>Foco:</strong> Fabricante eslovaco de kits de corrida RC de alta qualidade e precisão, focada em performance para competição (*on-road* e *off-road*).</p>
+            </li>
+            
+            <li>
+                <a href="http://www.serpent.com" target="_blank">Serpent</a>
+                <p><strong>Foco:</strong> Fabricante europeu com forte histórico em carros de corrida *on-road* e *off-road* de alta performance, especialmente modelos a nitro.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.mugenseiki.com/" target="_blank">Mugen Seiki</a>
+                <p><strong>Foco:</strong> Fabricante japonesa de kits de corrida off-road (buggies e truggies) de alta qualidade, conhecidos por sua engenharia e performance em competições.</p>
+            </li>
+            
+            <li>
+                <a href="http://hobao-racing.com/en/" target="_blank">Hobao Racing</a>
+                <p><strong>Foco:</strong> Produz uma variedade de veículos off-road, incluindo buggies e trucks, muitos dos quais são bem conceituados no cenário de corrida.</p>
+            </li>
+            
+            <li>
+                <a href="http://www.teknorc.com" target="_blank">Tekno RC</a>
+                <p><strong>Foco:</strong> Conhecida por seus kits de corrida *off-road* elétricos (buggies e trucks) e kits de conversão de nitro para elétrico, com foco em durabilidade e performance.</p>
+            </li>
+        </ul>
+
+        <hr>
+        
+        <p class="return-link">
+            <a href="index.html">← Voltar para a Página Principal</a>
+        </p>
     </main>
 
     <footer>
