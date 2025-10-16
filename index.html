@@ -15,28 +15,23 @@
             color: #333;
         }
         .container {
-            width: 95%;
-            max-width: 1100px; /* Aumentado para acomodar 3 colunas confortavelmente */
+            width: 90%;
+            max-width: 900px;
             margin: 20px auto;
             background: #fff;
             padding: 20px 30px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header {
             text-align: center;
             padding-bottom: 20px;
             border-bottom: 3px double #ddd;
         }
-        header h1 {
+        h1 {
             color: #333;
             font-size: 2.5em;
             margin-bottom: 5px;
-        }
-        header p {
-            color: #d9534f;
-            font-style: italic;
-            font-weight: bold;
         }
         h2 {
             color: #5cb85c;
@@ -68,72 +63,24 @@
         .call-to-action:hover {
             background-color: #31b0d5;
         }
-        
-        /* Estilos da nova estrutura de artigos */
-        #artigos {
-            padding-top: 20px;
-        }
-        .categorias-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .categoria-box {
-            flex: 1 1 300px; /* Permite 3 colunas em telas grandes */
-            background: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s;
-        }
-        .categoria-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-        .categoria-box ul {
-            list-style-type: '⚡ '; /* Ícone padrão (pode ser ajustado) */
+        /* Estilos da lista original */
+        .artigos-lista {
+            list-style-type: disc;
             padding-left: 20px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
-        .categoria-box li {
-            margin-bottom: 8px;
-            line-height: 1.4;
+        .artigos-lista li {
+            margin-bottom: 10px;
         }
-        .categoria-box a {
+        .artigos-lista a {
             color: #333;
             text-decoration: none;
             transition: color 0.2s;
         }
-        .categoria-box a:hover {
+        .artigos-lista a:hover {
             color: #d9534f;
             text-decoration: underline;
         }
-
-        /* Estilos para a seção de Links/Glossário */
-        .secoes-adicionais {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .secoes-adicionais div {
-            flex: 1 1 250px;
-            padding: 15px;
-        }
-        .secoes-adicionais a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background-color: #d9534f;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        
         /* Rodapé atualizado */
         footer {
             text-align: center;
@@ -154,8 +101,12 @@
 <div class="container">
 
     <header>
+        <p style="text-align: center;"> 
+            <img src="URL_DO_SEU_LOGO_AQUI" alt="Logo KZK RC-OFICINA" style="max-width: 100px; display: block; margin: 0 auto 10px;"> 
+            </p>
+        
         <h1>KZK RC-OFICINA</h1>
-        <p>Manutenção e Preparação de Carros RC para Velocidade Extrema e Alto Desempenho.</p>
+        <p style="color: #d9534f; font-style: italic; font-weight: bold;">Manutenção e Preparação de Carros RC para Velocidade Extrema e Alto Desempenho.</p>
         
         <h2>>> AQUI CRIAMOS RECORDES <<</h2>
         <p>Na KZK RC-Oficina, seu limite é a nossa pista de testes. Superar limites é nossa especialidade.</p>
@@ -166,116 +117,74 @@
 
     <section id="artigos">
         <h2 style="color: #d9534f; border-bottom: 2px solid #ddd; padding-bottom: 15px;">..: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS :..</h2>
-        <p style="text-align: center; margin-bottom: 30px;">Acelere seu aprendizado com nossa biblioteca de conhecimento, organizada por tópicos.</p>
+        <p style="text-align: center; margin-bottom: 30px;">Acelere seu aprendizado com nossa biblioteca de conhecimento acumulado em mais de duas décadas de prática.</p>
 
-        <div class="categorias-grid">
-
-            <div class="categoria-box">
-                <h3>⚡ Eletrônica & Potência</h3>
-                <ul style="list-style-type: '⚡ ';">
-                    <li><a href="./artigos/kv-vs-volt.html">KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
-                    <li><a href="./artigos/motoressensored.html">Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
-                    <li><a href="./artigos/brushed.html">O Enigma do "T" nos Motores Brushed de RC.</a></li>
-                    <li><a href="./artigos/turbo.html">Timing e Punch: O Turbo Gratuito para a Velocidade.</a></li>
-                    <li><a href="./artigos/esc-cartao.html">Cartão de Programação do ESC: O Segredo do Setup.</a></li>
-                    <li><a href="./artigos/esc_cartao_prog.html">Programação de ESCs: Do Básico ao Extremo.</a></li>
-                    <li><a href="./artigos/decifrandobaterias.html">Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S.</a></li>
-                    <li><a href="./artigos/lipo.html">Baterias LiPo: A Química da Velocidade e Carga Máxima.</a></li>
-                    <li><a href="./artigos/lipo-inchadas.html">⚠️Baterias LiPo Inchadas: Identificação, Causas e O que Fazer.</a></li>
-                    <li><a href="./artigos/capacitores.html">Vantagens e Desvantagens de Instalar Capacitores.</a></li>
-                    <li><a href="./artigos/fiacao.html">A Fiação da Velocidade: Conectores e Cabos 3S, 4S e 6S.</a></li>
-                    <li><a href="./artigos/servo-bec.html">Servo Digital e BEC: Precisão e Potência.</a></li>
-                </ul>
-            </div>
-            
-            <div class="categoria-box">
-                <h3>⚙️ Mecânica & Transmissão</h3>
-                <ul style="list-style-type: '⚙️ ';">
-                    <li><a href="./artigos/cvd-vs-dogbone.html">CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
-                    <li><a href="./artigos/cvd-vs-dogbone-comb.html">CVD vs Dogbone: Análise Técnica e Combinações.</a></li>
-                    <li><a href="./artigos/gear-mesh.html">Gear Mesh: O Segredo para Engrenagens Indestrutíveis.</a></li>
-                    <li><a href="./artigos/belt-gear.html">Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
-                    <li><a href="./artigos/spool.html">Spool (Eixo Rígido): Instalando o Diferencial Travado.</a></li>
-                    <li><a href="./artigos/angulos-amortecedores.html">Setup de Suspensão: Eliminando o "Olhômetro".</a></li>
-                    <li><a href="./artigos/dragrace-suspensao.html">O Setup da Suspensão para o Drag RC.</a></li>
-                    <li><a href="./artigos/motor-engrenagem.html">Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
-                    <li><a href="./artigos/kv-baixo-pinhao-grande.html">Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande.</a></li>
-                    <li><a href="./artigos/gear-temp.html">Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade.</a></li>
-                </ul>
-            </div>
-            
-            <div class="categoria-box">
-                <h3>💨 Velocidade & Aerodinâmica</h3>
-                <ul style="list-style-type: '💨 ';">
-                    <li><a href="./artigos/pneus-altas-velocidades.html">Pneus para Altas Velocidades: Como manter o carro no chão.</a></li>
-                    <li><a href="./artigos/downforce.html">Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
-                    <li><a href="./artigos/dragrace.html">O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag.</a></li>
-                    <li><a href="./artigos/dragrace-carro.html">Como Montar um Carro RC Outlaw Competitivo.</a></li>
-                    <li><a href="./artigos/dragrace-frank.html">Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
-                    <li><a href="./artigos/artigo-felony-outlaw-ex07.html">👑Felony vs. Outlaw vs. EX07: Quem é o Rei dos Super Carros 1/7?</a></li>
-                    <li><a href="./artigos/arrma-felony-detalhada.html">Arrma Felony - Rápido e Feroz: Descrição Detalhada.</a></li>
-                    <li><a href="./artigos/arrma-limitless-detalhada.html">Arrma Limitless - O Caça-Recordes de Velocidade.</a></li>
-                </ul>
-            </div>
-            
-            <div class="categoria-box">
-                <h3>🔧 Manutenção & Dicas Rápidas</h3>
-                <ul style="list-style-type: '🔧 ';">
-                    <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
-                    <li><a href="./artigos/algodao-supercola.html">Repare trincas da sua bolha com um truque simples e barato!</a></li>
-                    <li><a href="./artigos/cambagem.html">Como Corrigir o Alinhamento Negativo no WLtoys 144001.</a></li>
-                    <li><a href="./artigos/144001_longo.html">Inverter os Braços Traseiros do WLtoys 144001 para Estabilidade Máxima.</a></li>
-                    <li><a href="./artigos/144001-super-veloz.html">Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
-                    <li><a href="./artigos/pos-speed.html">Manutenção Preventiva Pós-Speed Run ou Drag.</a></li>
-                    <li><a href="./artigos/dia-antes-corrida.html">Dia Antes da Competição: O Checklist Definitivo Pré-Pista.</a></li>
-                    <li><a href="./artigos/dia-seguinte-competicao.html">Dia Seguinte da Competição: Manutenção Essencial.</a></li>
-                </ul>
-            </div>
-            
-            <div class="categoria-box" style="flex: 1 1 630px; /* Ocupa duas colunas para essas categorias menores */">
-                
-                <h3 style="display: inline-block; width: 48%;">💎 Materiais & Upgrades</h3>
-                <h3 style="display: inline-block; width: 48%; margin-left: 2%;">📡 Controle & Rádio</h3>
-                
-                <div style="display: flex;">
-                    <ul style="list-style-type: '💎 '; width: 50%;">
-                        <li><a href="./artigos/carbono-titanio.html">Fibra de Carbono vs. Titânio: A Escolha do Recorde.</a></li>
-                        <li><a href="./artigos/carbono.html">Fibra de Carbono: A Força Invisível por Trás da Performance.</a></li>
-                        <li><a href="./artigos/carbono-comprar.html">Onde Encontrar Peças de Fibra de Carbono para RC.</a></li>
-                        <li><a href="./artigos/escala-rc.html">1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto?</a></li>
-                    </ul>
-                    
-                    <ul style="list-style-type: '📡 '; width: 50%;">
-                        <li><a href="./artigos/gyro.html">Giroscópio (Gyro) em Carros de RC: Vale a Pena Usar?</a></li>
-                        <li><a href="./artigos/binding1.html">Além do Gatilho: Entendendo Transmissores e Receptores.</a></li>
-                        <li><a href="./artigos/dumborc.html">DUMBORC: O Rei do Custo-Benefício no RC.</a></li>
-                        <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: Sua Primeira Corrida Oficial.</a></li>
-                        <li><a href="./artigos/seguranca-160.html">🛑Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+.</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-
-        <p style="text-align: center; margin-top: 30px; font-weight: bold; color: #d9534f; font-size: 1.1em;">
-            <a href="#" style="color: #d9534f; text-decoration: none;">🏎️⚡🏁 AGUARDE + ARTIGOS EM BREVE ⚙️📏🔧</a>
-        </p>
+        <ul class="artigos-lista" style="list-style-type: none;">
+            <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
+            <li><a href="./artigos/cambagem.html">🔧Como Corrigir o Alinhamento Negativo no WLtoys 144001 (Solução Simples e Eficaz).</a></li>
+            <li><a href="./artigos/144001_longo.html">🔧O Segredo dos 100 km/h: Inverter os Braços Traseiros do WLtoys 144001 para Estabilidade Máxima</a></li>
+            <li><a href="./artigos/algodao-supercola.html">🔧Repare trincas da sua bolha com um truque simples e barato!</a></li>
+            <li><a href="./artigos/cvd-vs-dogbone.html">⚙️CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
+            <li><a href="./artigos/cvd-vs-dogbone-comb.html">⚙️CVD vs Dogbone no RC: Análise Técnica Completa e Combinações Possíveis.</a></li>
+            <li><a href="./artigos/gyro.html">⚙️Giroscópio (Gyro) em Carros de RC: Vale a Pena Usar em Alta Velocidade?.</a></li>
+            <li><a href="./artigos/brushed.html">⚙️O Enigma do "T" nos Motores Brushed de RC - Guia completo.</a></li>
+            <li><a href="./artigos/motoressensored.html">⚙️Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
+            <li><a href="./artigos/binding1.html">📡📶Além do Gatilho: Entendendo Transmissores, Receptores e o Binding no RC.</a></li>
+            <li><a href="./artigos/dumborc.html">📡📶DUMBORC: O Rei do Custo-Benefício no RC – Por Que Todo Entusiasta Está Usando.</a></li>
+            <li><a href="./artigos/kv-vs-volt.html">⚡KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
+            <li><a href="./artigos/motor-engrenagem.html">⚙️Motor com KV maior ou mudar engrenagem? Otimizando a Performance.</a></li>
+            <li><a href="./artigos/kv-baixo-pinhao-grande.html">⚙️Torque e Velocidade: Por Que o Motor de KV Baixo Exige Pinhão Grande.</a></li>
+            <li><a href="./artigos/turbo.html">⚙️Timing e Punch: O Turbo Gratuito para a Velocidade de Competição.</a></li>
+            <li><a href="./artigos/esc-cartao.html">⚙️Cartão de Programação do ESC: O Segredo do Setup de Performance.</a></li>
+            <li><a href="./artigos/esc_cartao_prog.html">⚙️Programação de ESCs: Do Básico ao Extremo</a></li>
+            <li><a href="./artigos/gear-mesh.html">⚙️Gear Mesh (Engrenamento): O Segredo para Engrenagens Indestrutíveis.</a></li>
+            <li><a href="./artigos/gear-temp.html">⚙️Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade.</a></li>
+            <li><a href="./artigos/belt-gear.html">⚙️Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
+            <li><a href="./artigos/decifrandobaterias.html">⚡Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S para a Alta Velocidade RC</a></li>
+            <li><a href="./artigos/lipo.html">⚡Baterias LiPo: A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
+            <li><a href="./artigos/lipo-inchadas.html">⚠️⚡Baterias LiPo Inchadas: Identificação, Causas e O que Fazer (Segurança em 1º).</a></li>
+            <li><a href="./artigos/capacitores.html">⚡Vantagens e Desvantagens de Instalar Capacitores.</a></li>
+            <li><a href="./artigos/fiacao.html">⚡A Fiação da Velocidade: Como Conectores e Cabos 3S, 4S e 6S Transformam a Potência Bruta.</a></li>
+            <li><a href="./artigos/pneus-altas-velocidades.html">💨Pneus para Altas Velocidades: Como manter o carro no chão a 100km/h.</a></li>
+            <li><a href="./artigos/carbono-titanio.html">🚀Fibra de Carbono vs. Titânio: A Escolha do Recorde Certo para o Seu RC 6S+.</a></li>
+            <li><a href="./artigos/carbono.html">💎Fibra de Carbono: A Força Invisível por Trás da Performance.</a></li>
+            <li><a href="./artigos/carbono-comprar.html">🛒Onde Encontrar Peças de Fibra de Carbono para RC.</a></li>
+            <li><a href="./artigos/escala-rc.html">📏1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
+            <li><a href="./artigos/dragrace.html">🚀O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag e Outlaw.</a></li>
+            <li><a href="./artigos/dragrace-carro.html">🚀Como Montar um Carro RC Outlaw Competitivo: Componentes e Investimentos.</a></li>
+            <li><a href="./artigos/downforce.html">🌬️ Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
+            <li><a href="./artigos/dragrace-suspensao.html">🏎️O Setup da Suspensão para o Drag RC: A Arte da Tração Perfeita.</a></li>
+            <li><a href="./artigos/spool.html">🏎️Spool (Eixo Rígido): Instalando o Diferencial Travado.</a></li>
+            <li><a href="./artigos/pos-speed.html">🏎️Manutenção Preventiva Pós-Speed Run ou Drag: Inspeção Crítica de Spool e CVDs.</a></li>
+            <li><a href="./artigos/dragrace-frank.html">🚀Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
+            <li><a href="./artigos/144001-super-veloz.html">🚀Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
+            <li><a href="./artigos/servo-bec.html">💡Servo Digital e BEC: Precisão e Potência para o Controle Absoluto.</a></li>
+            <li><a href="./artigos/angulos-amortecedores.html">📐Setup de Suspensão: Eliminando o "Olhômetro" para Estabilidade Máxima.</a></li>
+            <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: O Passo a Passo para Sua Primeira Corrida Oficial.</a></li>
+            <li><a href="./artigos/dia-antes-corrida.html">🔧Dia Antes da Competição:O Checklist Definitivo Pré-Pista.</a></li>
+            <li><a href="./artigos/dia-seguinte-competicao.html">🔧Dia Seguinte da Competição: Manutenção Essencial para Longa Vida do RC.</a></li>
+            <li><a href="./artigos/seguranca-160.html">🛑Segurança Acima de Tudo: Onde Testar Seu Projeto KZK 160+.</a></li>
+            <li><a href="./artigos/arrma-felony-detalhada.html">🏎️Arrma Felony - Rápido e Feroz: Descrição Detalhada – O Muscle Car da Pista.</a></li>
+            <li><a href="./artigos/arrma-limitless-detalhada.html">🏎️Arrma Limitless - O Caça-Recordes de Velocidade: Descrição Detalhada.</a></li>
+            <li><a href="./artigos/artigo-felony-outlaw-ex07.html">👑⚔️O Teto de Velocidade Estourou! Felony vs. Outlaw vs. EX07: Quem é o Rei Ilegítimo dos Super Carros 1/7?</a></li>
+            <li style="text-align: center; margin-top: 20px;"><a href="#" style="color: #d9534f; font-weight: bold;">🏎️⚡🏁 AGUARDE + ARTIGOS EM BREVE ⚙️📏🔧</a></li>
+        </ul>
     </section>
-    <div class="secoes-adicionais">
-        <div>
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; text-align: center;">
+        <div style="flex: 1 1 250px; padding: 15px;">
             <h3>Glossário RC</h3>
             <p>Decifre a linguagem técnica da alta performance. **Essencial para novatos e veteranos!**</p>
-            <a href="./glossario.html">Ver Glossário Completo</a>
+            <a href="./glossario.html" class="call-to-action" style="background-color: #d9534f; padding: 8px 15px;">Ver Glossário Completo</a>
         </div>
-        <div>
+        <div style="flex: 1 1 250px; padding: 15px;">
             <h3>Projetos RC</h3>
             <p>Acompanhe a construção e os testes de nossos carros. **Inspire seu próximo projeto!**</p>
-            <a href="./projetos.html">Explorar Projetos</a>
+            <a href="./projetos.html" class="call-to-action" style="background-color: #d9534f; padding: 8px 15px;">Explorar Projetos</a>
         </div>
-        <div>
+        <div style="flex: 1 1 250px; padding: 15px;">
             <h3>Links Úteis</h3>
             <p>Nossos fornecedores, comunidades e ferramentas favoritas. Recursos que fazem a diferença.</p>
-            <a href="./links.html">Acessar Links Selecionados</a>
+            <a href="./links.html" class="call-to-action" style="background-color: #d9534f; padding: 8px 15px;">Acessar Links Selecionados</a>
         </div>
     </div>
 
