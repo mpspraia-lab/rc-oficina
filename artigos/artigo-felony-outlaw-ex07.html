@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felony vs. Outlaw vs. EX07: O Confronto 1/7</title>
+    <title>💥🏎️ Felony vs. Outlaw vs. EX07: O Confronto 1/7</title>
     <style>
-        /* Estilos do Menu Lateral - Mantendo a identidade visual */
+        /* Estilos Base Otimizados para Mobile */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -15,62 +15,24 @@
         }
 
         header {
-            background-color: #1e3c72; /* Cor mais escura para contraste */
+            background-color: #1e3c72; /* Cor escura para contraste */
             color: white;
-            padding: 20px 40px;
+            padding: 20px;
             text-align: center;
         }
 
         .container {
-            display: flex;
-            max-width: 1200px;
+            max-width: 900px; /* Largura máxima ajustada */
             margin: 20px auto;
-            padding: 0 20px;
+            padding: 0 15px; /* Padding nas laterais para mobile */
         }
 
-        .sidebar-menu {
-            width: 250px;
-            background-color: #2c3e50; /* Cinza escuro / preto para o menu */
-            color: white;
-            padding: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            height: fit-content; /* Ajusta a altura ao conteúdo */
-        }
-
-        .sidebar-menu h3 {
-            text-align: center;
-            margin-top: 0;
-            padding: 0 20px 10px;
-            border-bottom: 1px solid #4a637d;
-        }
-
-        .sidebar-menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar-menu li a {
-            display: block;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: #ecf0f1;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .sidebar-menu li a:hover {
-            background-color: #34495e; /* Um pouco mais claro no hover */
-            color: #1abc9c; /* Destaque turquesa */
-        }
-        
-        /* Estilos específicos do Artigo */
+        /* Área de Conteúdo do Artigo Ocupa a Largura Total */
         .content-area {
-            flex-grow: 1;
-            padding: 20px 40px;
+            padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-left: 20px;
         }
 
         .content-area h1 {
@@ -79,12 +41,15 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             text-align: center;
+            font-size: 1.8em; /* Ajuste para mobile */
         }
 
         .content-area h2 {
             color: #2c3e50;
             margin-top: 30px;
-            font-size: 1.5em;
+            font-size: 1.4em;
+            border-left: 4px solid #3498db; /* Destaque azul sutil */
+            padding-left: 10px;
         }
 
         .content-area p {
@@ -92,23 +57,53 @@
             margin-bottom: 15px;
             text-align: justify;
         }
+        
+        /* Link de Retorno - Novo Elemento */
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
 
-        /* Estilo da Tabela Comparativa */
+        .return-link a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .return-link a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Estilo da Tabela Comparativa (Responsiva) */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
-            font-size: 0.9em;
+            font-size: 0.85em; /* Fonte menor para mobile */
             text-align: left;
+            display: block; /* Tabela como bloco para responsividade */
+            overflow-x: auto; /* Adiciona scroll horizontal se necessário */
+            white-space: nowrap;
         }
-
+        
+        table thead {
+            white-space: normal; /* Permite que o cabeçalho quebre linha se necessário */
+        }
+        
         table th, table td {
-            padding: 12px 15px;
+            padding: 10px;
             border: 1px solid #ddd;
+            min-width: 120px; /* Garante que as colunas não fiquem muito estreitas */
         }
 
         table th {
-            background-color: #3498db; /* Azul para cabeçalho */
+            background-color: #3498db;
             color: white;
             text-transform: uppercase;
         }
@@ -140,8 +135,6 @@
             margin-top: 40px;
             background-color: #2c3e50;
             color: #ecf0f1;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
 
@@ -159,22 +152,13 @@
 
     <div class="container">
         
-        <nav class="sidebar-menu">
-            <h3>Navegação do Site</h3>
-            <ul>
-                <li><a href="index.html">Voltar para a Página Principal</a></li>
-                <li><a href="#ato1">O Pioneiro (Arrma)</a></li>
-                <li><a href="#ato2">O Desafiante (ZD Racing)</a></li>
-                <li><a href="#ato3">O Premium (Serpent)</a></li>
-                <li><a href="#tabela">Comparativo Técnico</a></li>
-                <li><a href="#final">O Veredito Final</a></li>
-                <li><a href="links.html">Links Úteis (Originais)</a></li>
-            </ul>
-        </nav>
-        
         <main class="content-area">
 
-            <h1>O Teto de Velocidade Estourou! Felony vs. Outlaw vs. EX07: Quem é o Rei Ilegítimo dos Super Carros 1/7?</h1>
+            <div class="return-link">
+                <a href="index.html">⬅️ Voltar para a Página Principal</a>
+            </div>
+
+            <h1>💥🏎️ O Teto de Velocidade Estourou! Felony vs. Outlaw vs. EX07: Quem é o Rei Ilegítimo dos Super Carros 1/7?</h1>
 
             <p>No universo do RC de alta performance, a categoria *Street Bash* em escala 1/7 é dominada por máquinas brutais de 6S prontas para arranques insanos. O **Arrma Felony 6S BLX** estabeleceu o padrão: visual *muscle car* retrô, durabilidade extrema e velocidade insana.</p>
             
@@ -279,6 +263,10 @@
                 <p><strong>O Serpent 426 Outlaw (O Refinamento Premium):</strong> Chegando anos depois, o Outlaw é a **interpretação *Racing-Ready*** da plataforma. Ele usa o aprendizado de seus rivais e a herança de pistas da Serpent para oferecer uma máquina de **precisão técnica**. Com componentes 7075-T6 e *setup* ajustável, o Outlaw é o desafiante de luxo, mirando no piloto que busca a perfeição de *setup* e os materiais de *kit* de competição.</p>
                 
                 <p>O Serpent 426 Outlaw é, em essência, um **rival de peso** que promete apimentar a briga no asfalto. Ele traz a engenharia de precisão para o mundo RTR, forçando todos os concorrentes a elevarem seus padrões. Prepare-se, pois a guerra do asfalto em 1/7 acaba de ficar muito mais interessante!</p>
+            </div>
+            
+            <div class="return-link" style="margin-top: 30px;">
+                <a href="index.html">⬅️ Voltar para a Página Principal</a>
             </div>
 
         </main>
