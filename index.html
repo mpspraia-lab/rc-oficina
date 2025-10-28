@@ -40,7 +40,6 @@
     </script>
 
     <style>
-        /* ====== Estilos Base ====== */
         :root {
             --cor-principal: #FF4500;
             --cor-secundaria: #333;
@@ -96,6 +95,10 @@
         .side-stripe-left { left:0; } .side-stripe-right { right:0; }
         #logo { position:relative; color:gold; font-size:3em; font-weight:bold; font-family:'Arial',sans-serif; z-index:2; text-align:center; animation:logoFly 3s forwards; }
         @keyframes logoFly { 0%{opacity:0; transform:translateY(20px) scale(0.8);}50%{opacity:1; transform:translateY(0) scale(1.1);}100%{opacity:0; transform:translateY(-20px) scale(1);} }
+
+        .kzk-emoji { width:50px; height:auto; vertical-align:middle; margin-right:10px; transition: transform 0.2s; }
+        .kzk-emoji:hover { transform: scale(1.2); }
+        @media (max-width:600px){ .kzk-emoji{ width:35px; } }
     </style>
 </head>
 <body>
@@ -124,31 +127,22 @@
         <h2 class="text-center">..: ARTIGOS ESSENCIAIS PARA ENTUSIASTAS :..</h2>
         <p>Acelere seu aprendizado com nossa biblioteca de conhecimento acumulado em mais de duas décadas de prática.</p>
 
-        <!-- POTÊNCIA COM ESTABILIDADE -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/KZK-emoji_4.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Potência com Estabilidade
-        </h3>
+        <!-- Seções de artigos completas com emojis -->
+        <h3 class="categoria-titulo"><img src="./assets/KZK-emoji_4.png" alt="KZK Emoji 1" class="kzk-emoji">Potência com Estabilidade</h3>
         <ul class="article-list">
             <li><a href="./artigos/5-erros.html">⚠️Os 5 Maiores Erros de Iniciantes no Speed Run.</a></li>
             <li><a href="./artigos/cambagem.html">🔧Como Corrigir o Alinhamento Negativo no WLtoys 144001 (Solução Simples e Eficaz).</a></li>
             <li><a href="./artigos/144001_longo.html">🔧O Segredo dos 100 km/h: Inverter os Braços Traseiros do WLtoys 144001 para Estabilidade Máxima</a></li>
         </ul>
 
-        <!-- FUNDAMENTOS DA PERFORMANCE--- -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Fundamentos da Performance</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Fundamentos da Performance</h3>
         <ul class="article-list">
             <li><a href="./artigos/algodao-supercola.html">🔧Repare trincas da sua bolha com um truque simples e barato!</a></li>
             <li><a href="./artigos/cvd-vs-dogbone.html">⚙️CVD vs Dogbone no RC: Vantagens, Desvantagens e Qual Escolher.</a></li>
             <li><a href="./artigos/cvd-vs-dogbone-comb.html">⚙️CVD vs Dogbone no RC: Análise Técnica Completa e Combinações Possíveis.</a></li>
         </ul>
 
-        <!-- CONVERSÃO DE ENERGIA -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Conversão de Energia em Velocidade no RC</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Conversão de Energia em Velocidade no RC</h3>
         <ul class="article-list">
             <li><a href="./artigos/gear-mesh.html">⚙️Gear Mesh (Engrenamento): O Segredo para Engrenagens Indestrutíveis.</a></li>
             <li><a href="./artigos/gear-temp.html">⚙️Gearing e Temperatura: O Equilíbrio Crítico da Alta Velocidade.</a></li>
@@ -157,20 +151,14 @@
             <li><a href="./artigos/belt-gear.html">⚙️Transmissão por Correia: Prós, Contras e Recomendações.</a></li>
         </ul>
 
-        <!-- VELOCIDADE NAS SUAS MÃOS -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Velocidade nas Suas Mãos</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Velocidade nas Suas Mãos</h3>
         <ul class="article-list">
             <li><a href="./artigos/gyro.html">⚙️Giroscópio (Gyro) em Carros de RC: Vale a Pena Usar em Alta Velocidade?.</a></li>
             <li><a href="./artigos/binding1.html">📡📶Além do Gatilho: Entendendo Transmissores, Receptores e o Binding no RC.</a></li>
             <li><a href="./artigos/dumborc.html">📡📶DUMBORC: O Rei do Custo-Benefício no RC – Por Que Todo Entusiasta Está Usando.</a></li>
         </ul>
 
-        <!-- CORAÇÃO DA VELOCIDADE -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Coração da Velocidade: Motor e ESC</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Coração da Velocidade: Motor e ESC</h3>
         <ul class="article-list">
             <li><a href="./artigos/kv-vs-volt.html">⚡KV vs. Voltagem – A Combinação Perfeita de Motor e ESC.</a></li>
             <li><a href="./artigos/motoressensored.html">⚙️Motores Sensored e Sensorless - Entenda as Diferenças.</a></li>
@@ -180,10 +168,7 @@
             <li><a href="./artigos/esc_cartao_prog.html">⚙️Programação de ESCs: Do Básico ao Extremo</a></li>
         </ul>
 
-        <!-- ENERGIA SOB CONTROLE -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Energia Sob Controle</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Energia Sob Controle</h3>
         <ul class="article-list">
             <li><a href="./artigos/decifrandobaterias.html">⚡Decifrando Baterias Li-Po – O Segredo 3S, 4S e 6S para a Alta Velocidade RC</a></li>
             <li><a href="./artigos/lipo.html">⚡Baterias LiPo: A Química da Velocidade e Como Tirar o Máximo de Carga.</a></li>
@@ -193,10 +178,7 @@
             <li><a href="./artigos/servo-bec.html">💡Servo Digital e BEC: Precisão e Potência para o Controle Absoluto.</a></li>
         </ul>
 
-        <!-- FORÇA, TRAÇÃO E VELOCIDADE -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Força, Tração e Velocidade</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Força, Tração e Velocidade</h3>
         <ul class="article-list">
             <li><a href="./artigos/pneus-altas-velocidades.html">💨Pneus para Altas Velocidades: Como manter o carro no chão a 100km/h.</a></li>
             <li><a href="./artigos/carbono-titanio.html">🚀Fibra de Carbono vs. Titânio: A Escolha do Recorde Certo para o Seu RC 6S+.</a></li>
@@ -205,10 +187,7 @@
             <li><a href="./artigos/downforce.html">🌬️ Aerodinâmica: Downforce, Drag e a Arte de Ficar no Chão.</a></li>
         </ul>
 
-        <!-- ARRANCADAS DE ALTA PERFORMANCE -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Arrancadas de Alta Performance</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Arrancadas de Alta Performance</h3>
         <ul class="article-list">
             <li><a href="./artigos/dragrace.html">🚀O Poder da Arrancada RC: A Aceleração Bruta dos Carros Drag e Outlaw.</a></li>
             <li><a href="./artigos/dragrace-carro.html">🚀Como Montar um Carro RC Outlaw Competitivo: Componentes e Investimentos.</a></li>
@@ -218,10 +197,7 @@
             <li><a href="./artigos/dragrace-frank.html">🚀Desvendando o Setup do Carro RC Outlaw de Frank Ulbrik.</a></li>
         </ul>
 
-        <!-- AFINANDO PARA A VITÓRIA -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Afinando para a Vitória</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Afinando para a Vitória</h3>
         <ul class="article-list">
             <li><a href="./artigos/angulos-amortecedores.html">📐Setup de Suspensão: Eliminando o "Olhômetro" para Estabilidade Máxima.</a></li>
             <li><a href="./artigos/partiu-competir.html">🏆Partiu Competir: O Passo a Passo para Sua Primeira Corrida Oficial.</a></li>
@@ -231,10 +207,7 @@
             <li><a href="./artigos/144001-super-veloz.html">🚀Criando um 144001 Super Veloz: Guia de Upgrades Extremos.</a></li>
         </ul>
 
-        <!-- VELOCIDADE SOB LUPA -->
-        <h3 class="categoria-titulo">
-            <img src="./assets/kzk-emoji-1.png" alt="KZK Emogi 1"style="width:28px;height:28px;vertical-align:middle;margin-right:10px;">
-            Velocidade Sob Lupa</h3>
+        <h3 class="categoria-titulo"><img src="./assets/kzk-emoji-1.png" alt="KZK Emoji 1" class="kzk-emoji">Velocidade Sob Lupa</h3>
         <ul class="article-list">
             <li><a href="./artigos/escala-rc.html">📏1/14 ou 1/12: Qual a Melhor Escala para o Seu Próximo Projeto de Velocidade?</a></li>
             <li><a href="./artigos/arrma-felony-detalhada.html">🏎️Arrma Felony - Rápido e Feroz: Descrição Detalhada – O Muscle Car da Pista.</a></li>
