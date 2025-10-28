@@ -5,38 +5,178 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Glossário RC - KZK RC-Oficina</title>
 <style>
-    body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #1a1a1a; }
-    header { background: #333; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #FF4500; }
-    header h1 { font-family: 'Arial Black', sans-serif; margin: 0; font-size: 2em; }
-    .container { width: 90%; max-width: 1000px; margin: 20px auto; padding: 20px; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
-    h2 { color: #FF4500; border-bottom: 2px solid #FF4500; padding-bottom: 5px; margin-top: 20px; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 15px; padding: 10px; background: #eee; border-left: 5px solid #FF4500; border-radius: 4px; }
-    a { color: #FF4500; text-decoration: none; font-weight: bold; }
-    a:hover { color: #333; text-decoration: underline; }
-    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 40px; font-size: 0.9em; }
+    body { 
+        font-family: 'Helvetica Neue', sans-serif; 
+        margin: 0; padding: 0; 
+        background: #1a1a1a; 
+        color: #f4f4f4; 
+        line-height: 1.6; 
+    }
+    header { 
+        background: #111; 
+        color: #FF4500; 
+        padding: 25px 10px; 
+        text-align: center; 
+        border-bottom: 5px solid #FF6347; 
+    }
+    header h1 { 
+        font-family: 'Arial Black', sans-serif; 
+        margin: 0; 
+        font-size: 2.2em; 
+    }
+    header p { 
+        margin: 5px 0 0 0; 
+        font-size: 1.1em; 
+        color: #FFD700;
+    }
+    .container { 
+        width: 90%; 
+        max-width: 1200px; 
+        margin: 20px auto; 
+        padding: 25px; 
+        background: #222; 
+        box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+        border-radius: 10px; 
+    }
+    h2 { 
+        color: #FFD700; 
+        border-bottom: 3px dashed #FF4500; 
+        padding-bottom: 8px; 
+        margin-top: 40px; 
+        font-size: 1.6em;
+    }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-bottom: 30px; 
+    }
+    table th, table td { 
+        border: 1px solid #444; 
+        padding: 12px; 
+        text-align: left; 
+        vertical-align: top; 
+    }
+    table th { 
+        background: #FF4500; 
+        color: white; 
+        font-size: 1.05em;
+    }
+    table tr:nth-child(even) { 
+        background: #333; 
+    }
+    table tr:nth-child(odd) { 
+        background: #2a2a2a; 
+    }
+    a { 
+        color: #FFD700; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+    a:hover { 
+        color: #FF4500; 
+        text-decoration: underline; 
+    }
+    footer { 
+        text-align: center; 
+        padding: 25px; 
+        background: #111; 
+        color: #FFD700; 
+        margin-top: 40px; 
+        font-size: 0.95em; 
+        border-top: 3px solid #FF4500;
+    }
+    /* Emojis para cada seção */
+    .esc::before { content: "⚡ "; }
+    .controle::before { content: "📻 "; }
+    .mecanica::before { content: "🔧 "; }
+    .pneus::before { content: "🏎️ "; }
+    .pista::before { content: "💨 "; }
+    @media screen and (max-width: 768px) {
+        table th, table td { font-size: 0.9em; padding: 8px; }
+        h2 { font-size: 1.3em; }
+    }
 </style>
 </head>
 <body>
+
 <header>
-    <h1>Glossário RC</h1>
-    <p>Decifre os termos e técnicas de alta performance em carros RC.</p>
+    <h1>🏁 Glossário Definitivo KZK RC-Oficina</h1>
+    <p>Domine a linguagem da alta velocidade elétrica em carros RC</p>
 </header>
+
 <div class="container">
-    <h2>Termos Essenciais</h2>
-    <ul>
-        <li><strong>CVD:</strong> Cardan de velocidade que transmite torque de forma eficiente.</li>
-        <li><strong>Gyro:</strong> Sistema de estabilização para maior controle em alta velocidade.</li>
-        <li><strong>LiPo:</strong> Tipo de bateria de alta capacidade e descarga rápida.</li>
-        <li><strong>Sensorless:</strong> Motor RC sem sensor, mais simples, mas exige experiência para controle fino.</li>
-        <li><strong>Motor Sensored:</strong> Motor RC com sensor que garante maior precisão de rotação.</li>
-        <!-- Adicione os outros termos do glossário aqui -->
-    </ul>
+    <p>Este guia completo é a sua ferramenta essencial para entender, construir e pilotar um carro RC de alta velocidade. Cobrimos cada termo crucial, da eletrônica de ponta ao contato do pneu com a pista.</p>
+
+    <h2 class="esc">Eletrônica de Potência e Programação do ESC</h2>
+    <table>
+        <tr><th>Termo</th><th>Definição na Alta Performance RC</th></tr>
+        <tr><td>ESC (Electronic Speed Controller)</td><td>O "cérebro" do carro. Controla velocidade, timing e punch do motor. Amperagem sempre acima da demanda de pico do motor.</td></tr>
+        <tr><td>Amperagem (Corrente Nominal)</td><td>Corrente máxima (A) que o ESC suporta de forma contínua e segura.</td></tr>
+        <tr><td>Timing / Avanço (Advance)</td><td>Ajusta avanço de fase do motor. Mais timing = mais RPM, mais calor.</td></tr>
+        <tr><td>Turbo Timing / Boost</td><td>Aumento extra de timing em alta rotação (WOT) para pico de velocidade.</td></tr>
+        <tr><td>Punch</td><td>Pico de força inicial na largada, ajustável para otimizar tração ou evitar wheelies.</td></tr>
+        <tr><td>Cutoff Voltage</td><td>Corta potência quando bateria atinge voltagem mínima, protegendo células Li-Po.</td></tr>
+        <tr><td>Drag Brake</td><td>Freio programável em neutro, simula arrasto natural e melhora desaceleração.</td></tr>
+        <tr><td>Li-Po / Li-HV</td><td>Li-Po = padrão; Li-HV = suporta voltagem superior, mais potência de pico.</td></tr>
+        <tr><td>S (S-Rating)</td><td>Número de células Li-Po em série (ex: 6S, 8S). Indica voltagem total.</td></tr>
+        <tr><td>C (C-Rating)</td><td>Taxa de descarga da bateria (ex: 100C). Afeta punch e resposta do motor.</td></tr>
+        <tr><td>Motor Brushless</td><td>Motor sem escovas, obrigatório para alta performance, maior eficiência e RPM.</td></tr>
+        <tr><td>KV (Kilovolts)</td><td>Velocidade de rotação do motor por volt (RPM/Volt). KV alto = mais velocidade.</td></tr>
+        <tr><td>Telemetria</td><td>Monitora dados do carro (temperatura ESC/motor, voltagem, velocidade GPS). Essencial para ajuste fino e segurança.</td></tr>
+    </table>
+
+    <h2 class="controle">Eletrônica de Controle: Precisão e Resposta</h2>
+    <table>
+        <tr><th>Termo</th><th>Definição na Alta Performance RC</th></tr>
+        <tr><td>Receiver (Receptor)</td><td>Recebe sinal do transmissor. Baixa latência e sinal estável são vitais.</td></tr>
+        <tr><td>Latência (Lag)</td><td>Atraso entre comando e resposta do carro. Baixa latência = controle preciso.</td></tr>
+        <tr><td>Dual Rate (D/R)</td><td>Limita curso máximo do servo de direção, reduz sensibilidade em alta velocidade.</td></tr>
+        <tr><td>Exponencial (Expo)</td><td>Altera sensibilidade da direção/ aceleração ao redor do centro.</td></tr>
+        <tr><td>Fail Safe</td><td>Programa carro para condição segura caso sinal de rádio seja perdido.</td></tr>
+        <tr><td>Giroscópio (Gyro / TSM)</td><td>Sensor de estabilidade que aplica microcorreções na direção para manter carro reto.</td></tr>
+        <tr><td>Servo Digital</td><td>Motor da direção, com torque e resposta rápida para alta velocidade.</td></tr>
+    </table>
+
+    <h2 class="mecanica">Setup Mecânico e Transmissão</h2>
+    <table>
+        <tr><th>Termo</th><th>Definição na Alta Performance RC</th></tr>
+        <tr><td>Gearing / Relação de Marchas</td><td>Combinação entre Pinhão e Spur. Balanceia torque e velocidade final.</td></tr>
+        <tr><td>Toe (Toe-in/Toe-out)</td><td>Ângulo horizontal das rodas. Toe-in dianteiro = mais estabilidade em retas.</td></tr>
+        <tr><td>Camber (Ângulo de Curvatura)</td><td>Inclinação vertical das rodas. Maximiza contato do pneu com solo.</td></tr>
+        <tr><td>Downforce / Aerofólio</td><td>Força que empurra carro para o chão. Mantém tração e estabilidade.</td></tr>
+        <tr><td>CVD / Dogbone</td><td>Eixo de transmissão robusto (junta homocinética). Essencial em alta potência.</td></tr>
+        <tr><td>Squat</td><td>Afundamento da suspensão traseira durante aceleração. Vital no Drag RC.</td></tr>
+        <tr><td>Fibra de Carbono</td><td>Material leve e rígido para chassis e torres. Ideal para recordes.</td></tr>
+    </table>
+
+    <h2 class="pneus">Pneus e Rodas: O Contato Crítico</h2>
+    <table>
+        <tr><th>Termo</th><th>Definição na Alta Performance RC</th></tr>
+        <tr><td>Pneus Belted (Cintados)</td><td>Pneus com cinta interna (Kevlar) para evitar ballooning em alta velocidade.</td></tr>
+        <tr><td>Pneus Sólidos (Tires)</td><td>Borracha densa/maciça, evita ballooning extremo.</td></tr>
+        <tr><td>Pneus de Espuma (Foams)</td><td>Banda de rodagem de espuma alta densidade. Excelente aderência em asfalto liso e Drag RC.</td></tr>
+        <tr><td>Ballooning (Inchaço)</td><td>Deformação do pneu causada pela força centrífuga. Risco de estouro em speed runs.</td></tr>
+        <tr><td>Traction Compound / Prep</td><td>Líquido para amaciar pneu e aumentar aderência (grip).</td></tr>
+        <tr><td>Pneus Slick</td><td>Sem sulcos, máxima área de contato. Ideal para asfalto seco.</td></tr>
+        <tr><td>Montagem Glueada (Glued)</td><td>Cola pneu à roda, evita descolamento devido à força centrífuga.</td></tr>
+        <tr><td>Shore Rating (Dureza)</td><td>Define dureza do pneu. Mais macio = mais aderência, desgaste rápido.</td></tr>
+    </table>
+
+    <h2 class="pista">Pista e Gírias Essenciais</h2>
+    <table>
+        <tr><th>Termo</th><th>Definição Comum entre Entusiastas</th></tr>
+        <tr><td>Speed Run</td><td>Atingir maior velocidade em reta medida, usando telemetria GPS.</td></tr>
+        <tr><td>Outlaw</td><td>Categoria Drag RC com poucas restrições, motores e voltagens extremas (8S+).</td></tr>
+        <tr><td>Kit</td><td>Modelo vendido desmontado, exigindo montagem e escolha de componentes.</td></tr>
+        <tr><td>RTR (Ready-to-Run)</td><td>Carro totalmente montado e pronto, com eletrônica básica.</td></tr>
+    </table>
+
     <p><a href="index.html">⬅ Voltar à Página Inicial</a></p>
 </div>
+
 <footer>
     &copy; 2025 KZK RC-Oficina. Todos os direitos reservados.
 </footer>
+
 </body>
 </html>
-
